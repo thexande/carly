@@ -13,11 +13,12 @@
 		B0AD277C1DBA96AB00BC222A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AD277A1DBA96AB00BC222A /* LaunchScreen.storyboard */; };
 		B0AD27871DBA96AC00BC222A /* carlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27861DBA96AC00BC222A /* carlyTests.swift */; };
 		B0AD27921DBA96AC00BC222A /* carlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27911DBA96AC00BC222A /* carlyUITests.swift */; };
-		B0AD27A21DBA9CA400BC222A /* CarlyRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27A11DBA9CA400BC222A /* CarlyRootTableViewController.swift */; };
 		B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */; };
 		B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */; };
 		B0DCECCF1DBAADA100202ABB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECCD1DBAADA100202ABB /* CarTableViewCell.swift */; };
 		B0DCECD01DBAADA100202ABB /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DCECCE1DBAADA100202ABB /* CarTableViewCell.xib */; };
+		B0DCECD31DBAAE3600202ABB /* RootTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD21DBAAE3600202ABB /* RootTableView.swift */; };
+		B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +51,12 @@
 		B0AD278D1DBA96AC00BC222A /* carlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AD27911DBA96AC00BC222A /* carlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carlyUITests.swift; sourceTree = "<group>"; };
 		B0AD27931DBA96AC00BC222A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0AD27A11DBA9CA400BC222A /* CarlyRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarlyRootTableViewController.swift; path = ViewControllers/CarlyRootTableViewController.swift; sourceTree = "<group>"; };
 		B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarlyHeaderView.swift; path = Views/CarlyHeaderView.swift; sourceTree = "<group>"; };
 		B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
 		B0DCECCD1DBAADA100202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = CarTableViewCell/CarTableViewCell.swift; sourceTree = "<group>"; };
 		B0DCECCE1DBAADA100202ABB /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarTableViewCell.xib; path = CarTableViewCell/CarTableViewCell.xib; sourceTree = "<group>"; };
+		B0DCECD21DBAAE3600202ABB /* RootTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootTableView.swift; path = Views/RootTableView.swift; sourceTree = "<group>"; };
+		B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +139,8 @@
 		B0AD27A31DBA9CB100BC222A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B0AD27A11DBA9CA400BC222A /* CarlyRootTableViewController.swift */,
 				B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */,
+				B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -148,6 +150,7 @@
 			children = (
 				B0DCECD11DBAADAD00202ABB /* CarTableViewCell */,
 				B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */,
+				B0DCECD21DBAAE3600202ABB /* RootTableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,9 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0AD27A21DBA9CA400BC222A /* CarlyRootTableViewController.swift in Sources */,
 				B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */,
+				B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */,
 				B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */,
+				B0DCECD31DBAAE3600202ABB /* RootTableView.swift in Sources */,
 				B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */,
 				B0DCECCF1DBAADA100202ABB /* CarTableViewCell.swift in Sources */,
 			);

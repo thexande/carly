@@ -11,13 +11,18 @@ import UIKit
 class RootViewController: UIViewController {
 
     @IBOutlet weak var carSubView: CarlyHeaderView!
+    @IBOutlet weak var carsTable: UIView!
     
     @IBAction func expandView(_ sender: AnyObject) {
         UIView.animate(withDuration: 0.7, animations: {
             var carViewFrame = self.carSubView.frame
             carViewFrame.origin.y -= carViewFrame.size.height
             self.carSubView.frame = carViewFrame
-        
+            
+            // table view
+            var tableViewFrame = self.carsTable.frame
+            tableViewFrame.origin.y -= carViewFrame.size.height
+            self.carsTable.frame = tableViewFrame
         })
     }
     
