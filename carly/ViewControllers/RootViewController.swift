@@ -10,6 +10,7 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var carSubView: CarlyHeaderView!
     @IBOutlet weak var carsTable: UIView!
     
@@ -22,7 +23,10 @@ class RootViewController: UIViewController {
             // table view
             var tableViewFrame = self.carsTable.frame
             tableViewFrame.origin.y -= carViewFrame.size.height
+            self.tableViewHeight.constant = 500
+            self.view.layoutIfNeeded()
             self.carsTable.frame = tableViewFrame
+            
         })
     }
     
