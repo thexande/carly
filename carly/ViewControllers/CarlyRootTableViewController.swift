@@ -9,6 +9,7 @@
 import UIKit
 
 class CarlyRootTableViewController: UITableViewController {
+    @IBOutlet weak var titleLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

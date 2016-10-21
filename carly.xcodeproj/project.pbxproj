@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27711DBA96AB00BC222A /* AppDelegate.swift */; };
-		B0AD27741DBA96AB00BC222A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27731DBA96AB00BC222A /* ViewController.swift */; };
 		B0AD27771DBA96AB00BC222A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AD27751DBA96AB00BC222A /* Main.storyboard */; };
 		B0AD27791DBA96AB00BC222A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0AD27781DBA96AB00BC222A /* Assets.xcassets */; };
 		B0AD277C1DBA96AB00BC222A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AD277A1DBA96AB00BC222A /* LaunchScreen.storyboard */; };
 		B0AD27871DBA96AC00BC222A /* carlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27861DBA96AC00BC222A /* carlyTests.swift */; };
 		B0AD27921DBA96AC00BC222A /* carlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27911DBA96AC00BC222A /* carlyUITests.swift */; };
 		B0AD27A21DBA9CA400BC222A /* CarlyRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27A11DBA9CA400BC222A /* CarlyRootTableViewController.swift */; };
+		B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */; };
+		B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		B0AD276E1DBA96AB00BC222A /* carly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AD27711DBA96AB00BC222A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0AD27731DBA96AB00BC222A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0AD27761DBA96AB00BC222A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0AD27781DBA96AB00BC222A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0AD277B1DBA96AB00BC222A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		B0AD27911DBA96AC00BC222A /* carlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carlyUITests.swift; sourceTree = "<group>"; };
 		B0AD27931DBA96AC00BC222A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0AD27A11DBA9CA400BC222A /* CarlyRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarlyRootTableViewController.swift; path = ViewControllers/CarlyRootTableViewController.swift; sourceTree = "<group>"; };
+		B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarlyHeaderView.swift; path = Views/CarlyHeaderView.swift; sourceTree = "<group>"; };
+		B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		B0AD27701DBA96AB00BC222A /* carly */ = {
 			isa = PBXGroup;
 			children = (
+				B0AD27A61DBA9DA400BC222A /* Views */,
 				B0AD27A31DBA9CB100BC222A /* ViewControllers */,
 				B0AD27711DBA96AB00BC222A /* AppDelegate.swift */,
-				B0AD27731DBA96AB00BC222A /* ViewController.swift */,
 				B0AD27751DBA96AB00BC222A /* Main.storyboard */,
 				B0AD27781DBA96AB00BC222A /* Assets.xcassets */,
 				B0AD277A1DBA96AB00BC222A /* LaunchScreen.storyboard */,
@@ -132,8 +134,17 @@
 			isa = PBXGroup;
 			children = (
 				B0AD27A11DBA9CA400BC222A /* CarlyRootTableViewController.swift */,
+				B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0AD27A61DBA9DA400BC222A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AD27A21DBA9CA400BC222A /* CarlyRootTableViewController.swift in Sources */,
-				B0AD27741DBA96AB00BC222A /* ViewController.swift in Sources */,
 				B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */,
+				B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */,
+				B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +538,7 @@
 				B0AD27981DBA96AC00BC222A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0AD27991DBA96AC00BC222A /* Build configuration list for PBXNativeTarget "carlyTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +547,7 @@
 				B0AD279B1DBA96AC00BC222A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0AD279C1DBA96AC00BC222A /* Build configuration list for PBXNativeTarget "carlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +556,7 @@
 				B0AD279E1DBA96AC00BC222A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
