@@ -10,7 +10,7 @@
         <!--CARLY-->
         <scene sceneID="D4y-OP-zMS">
             <objects>
-                <viewController id="8mg-vg-uHT" customClass="RootViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8mg-vg-uHT" customClass="RootViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qOZ-F9-MCr"/>
                         <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
@@ -25,6 +25,15 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-5X-rpn" customClass="CarlyHeaderView" customModule="carly" customModuleProvider="target">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Select a car from the table below!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-WQ-3Nf">
+                                        <frame key="frameInset" minX="40" minY="48" width="312" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.96862941979999995" green="0.55722707510000002" blue="0.34095072749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YQI-xv-pNX">
@@ -65,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3417.3913043478265" y="141.84782608695653"/>
+            <point key="canvasLocation" x="3416.8000000000002" y="141.67916041979012"/>
         </scene>
         <!--Root Table View Controller-->
         <scene sceneID="qvC-KM-aiB">

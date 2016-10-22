@@ -27,7 +27,16 @@ AnimationHelper.animateUp(carSubView: self.carSubView, carTable: self.carTable)
     }
     
     override func viewDidLoad() {
-
+        
+        //show message for 2 seconds
+        let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            AnimationHelper.animateUp(carSubView: self.carSubView, carTable: self.carTable)
+        }
+        
+//        self.carSubView.isHidden = true
+//        self.carTable.frame.origin.y -= 200
+               // AnimationHelper.animateDown(carSubView: self.carSubView, carTable: self.carTable)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
