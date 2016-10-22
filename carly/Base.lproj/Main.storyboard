@@ -15,41 +15,28 @@
                         <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-dx-JUd">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-dx-JUd">
+                                <frame key="frameInset" height="376"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="rpe-fn-OIP" kind="embed" id="B0h-Z2-efH"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-5X-rpn" customClass="CarlyHeaderView" customModule="carly" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-5X-rpn" customClass="CarlyHeaderView" customModule="carly" customModuleProvider="target">
+                                <frame key="frameInset" minY="108" width="414" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862941979999995" green="0.55722707510000002" blue="0.34095072749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YQI-xv-pNX">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hlC-hh-DBF"/>
-                                </constraints>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YQI-xv-pNX">
+                                <frame key="frameInset" minY="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="top" secondItem="YQI-xv-pNX" secondAttribute="bottom" id="0Mb-qN-21q"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="bottom" secondItem="YmN-ur-UJp" secondAttribute="top" id="5jc-9o-Upt"/>
-                            <constraint firstAttribute="trailing" secondItem="4a9-5X-rpn" secondAttribute="trailing" id="Cis-5g-dnm"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="top" secondItem="YQI-xv-pNX" secondAttribute="bottom" id="HKd-Zc-NUy"/>
-                            <constraint firstAttribute="trailing" secondItem="YQI-xv-pNX" secondAttribute="trailing" id="LkR-Ow-Otx"/>
-                            <constraint firstAttribute="trailing" secondItem="9mt-dx-JUd" secondAttribute="trailing" id="QnC-UK-WyE"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="RbT-gx-RTC"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="top" secondItem="YQI-xv-pNX" secondAttribute="bottom" id="Srf-mi-5xg"/>
-                            <constraint firstItem="YQI-xv-pNX" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="Wnx-so-KTj"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="YRT-3h-QbE"/>
-                            <constraint firstItem="YmN-ur-UJp" firstAttribute="top" secondItem="4a9-5X-rpn" secondAttribute="bottom" constant="309" id="Yoh-sj-Xjl"/>
-                            <constraint firstItem="YmN-ur-UJp" firstAttribute="top" secondItem="9mt-dx-JUd" secondAttribute="bottom" id="cqd-yx-rb8"/>
-                            <constraint firstItem="YmN-ur-UJp" firstAttribute="top" secondItem="9mt-dx-JUd" secondAttribute="bottom" id="snw-b9-brg"/>
-                            <constraint firstItem="YQI-xv-pNX" firstAttribute="top" secondItem="qOZ-F9-MCr" secondAttribute="bottom" id="uAu-Q0-6Tm"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP">
                         <barButtonItem key="rightBarButtonItem" title="expand" id="GHy-01-BuV">
@@ -65,22 +52,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="143.47826086956522"/>
+            <point key="canvasLocation" x="3418.840579710145" y="143.47826086956522"/>
         </scene>
         <!--Root Table View Controller-->
         <scene sceneID="qvC-KM-aiB">
             <objects>
                 <tableViewController id="rpe-fn-OIP" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="drP-4J-ofg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1T6-Tp-3v3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1T6-Tp-3v3" id="aCE-Sx-nhn">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="CarCell"/>
