@@ -12,16 +12,14 @@ import SwiftyJSON
 
 class RootTableViewController: UITableViewController {
     
-    var carData: JSON = CarModel.getAllCars()!
-
-    var carArray:[NSObject]?
-
+    let carData: JSON = CarModel.getAllCars()!
+    var carDataArray: [JSON]?
     
     override func viewDidLoad() {
+        tableView.estimatedRowHeight = 85.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         
-        for item in carData.arrayValue {
-            print(item["make"].stringValue)
-        }
+        self.carDataArray = carData.arrayValue
         
         super.viewDidLoad()
         // register cell nib
@@ -57,7 +55,7 @@ class RootTableViewController: UITableViewController {
     
         
          //Configure the cell...        
-        cell.car = carData.arrayValue[indexPath.row]
+        cell.car = self.carDataArray?[indexPath.row]
         return cell
     }
  
