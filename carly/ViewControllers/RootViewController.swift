@@ -21,11 +21,11 @@ class RootViewController: UIViewController {
             self.carSubView.frame = carViewFrame
             
             // table view
-            var tableViewFrame = self.carsTable.frame
-            tableViewFrame.origin.y -= carViewFrame.size.height
-            self.tableViewHeight.constant = 500
+//            var tableViewFrame = self.carsTable.frame
+//            tableViewFrame.origin.y -= carViewFrame.size.height
+//            self.tableViewHeight.constant = 500
             self.view.layoutIfNeeded()
-            self.carsTable.frame = tableViewFrame
+            //self.carsTable.frame = tableViewFrame
             
         })
     }

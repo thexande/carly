@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-dx-JUd">
@@ -67,15 +67,15 @@
             <objects>
                 <tableViewController id="rpe-fn-OIP" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="drP-4J-ofg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="407.33333333333326"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="359"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1T6-Tp-3v3">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1T6-Tp-3v3" id="aCE-Sx-nhn">
-                                    <frame key="frameInset" width="414" height="43"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="CarCell"/>
