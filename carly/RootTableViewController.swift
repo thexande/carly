@@ -14,6 +14,12 @@ class RootTableViewController: UITableViewController {
     let items = ["woot","woot","woot","woot","woot","woot","woot","woot","woot","woot"]
     
     override func viewDidLoad() {
+        
+        if CarModel.getAllCars() != nil {
+            let carData = CarModel.getAllCars()!
+            print("car data here", carData)
+        }
+        
         super.viewDidLoad()
         // register cell nib
         tableView.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: "CarCell")
