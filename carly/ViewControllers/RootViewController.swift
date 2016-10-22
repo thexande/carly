@@ -18,12 +18,9 @@ class RootViewController: UIViewController {
     @IBAction func contract(_ sender: AnyObject) {
         AnimationHelper.animateDown(carSubView: self.carSubView, carTable: self.carTable)
     }
+    
     @IBAction func expandView(_ sender: AnyObject) {
-
-        
-AnimationHelper.animateUp(carSubView: self.carSubView, carTable: self.carTable)
-        
-
+        AnimationHelper.animateUp(carSubView: self.carSubView, carTable: self.carTable)
     }
     
     override func viewDidLoad() {
@@ -34,9 +31,6 @@ AnimationHelper.animateUp(carSubView: self.carSubView, carTable: self.carTable)
             AnimationHelper.animateUp(carSubView: self.carSubView, carTable: self.carTable)
         }
         
-//        self.carSubView.isHidden = true
-//        self.carTable.frame.origin.y -= 200
-               // AnimationHelper.animateDown(carSubView: self.carSubView, carTable: self.carTable)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

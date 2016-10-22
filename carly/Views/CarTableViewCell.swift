@@ -36,6 +36,13 @@ class CarTableViewCell: UITableViewCell {
         self.carModelLabel.text = self.car?["model"].stringValue
         self.carYearLabel.text = self.car?["year"].stringValue
         self.carMileageLabel.text = self.car?["mileage"].stringValue
+        
+        if(self.car?["image_url"].stringValue != nil) {
+            let image_url = self.car?["image_url"].stringValue as String!
+            let url = URL(string: image_url!)
+            let data = try? Data(contentsOf: url!)
+            print(url, data)
+            //self.carImageView.image = UIImage(data: data!)
+        }
     }
-    
 }
