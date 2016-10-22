@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="4265" y="143"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root Navigation View Controller-->
         <scene sceneID="hhl-dO-yIR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mr8-67-gOG" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mr8-67-gOG" customClass="RootNavigationViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz0-KZ-I1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 class RootTableViewController: UITableViewController {
     
+    var carData: JSON = CarModel.getAllCars()!
 
-    let items = ["woot","woot","woot","woot","woot","woot","woot","woot","woot","woot"]
+    var carArray:[NSObject]?
+
     
     override func viewDidLoad() {
         
-        if CarModel.getAllCars() != nil {
-            let carData = CarModel.getAllCars()!
-            print("car data here", carData)
+        for item in carData.arrayValue {
+            print(item["make"].stringValue)
         }
         
         super.viewDidLoad()
@@ -45,7 +48,7 @@ class RootTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return self.carData.count
     }
 
     
@@ -53,8 +56,8 @@ class RootTableViewController: UITableViewController {
         let cell:CarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as! CarTableViewCell
     
         
-         //Configure the cell...
-        cell.carModel = "woot"
+         //Configure the cell...        
+        cell.car = carData.arrayValue[indexPath.row]
         return cell
     }
  

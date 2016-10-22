@@ -178,7 +178,7 @@ public class SwiftSpinner: UIView {
             }
         })
     }
-
+    
     ///
     /// Show the spinner with the outer circle representing progress (0 to 1)
     ///
@@ -188,7 +188,7 @@ public class SwiftSpinner: UIView {
         spinner.outerCircle.strokeEnd = CGFloat(progress)
         return spinner
     }
-
+    
     //
     // Hide the spinner
     //
@@ -243,14 +243,14 @@ public class SwiftSpinner: UIView {
     public var title: String = "" {
         didSet {
             let spinner = SwiftSpinner.sharedInstance
-
+            
             guard spinner.animating else {
                 spinner.titleLabel.transform = CGAffineTransform.identity
                 spinner.titleLabel.alpha = 1.0
                 spinner.titleLabel.text = self.title
                 return
             }
-
+            
             UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
                 spinner.titleLabel.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
                 spinner.titleLabel.alpha = 0.2

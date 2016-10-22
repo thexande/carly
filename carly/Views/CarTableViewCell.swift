@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CarTableViewCell: UITableViewCell {
-
+    var car: JSON?
     var carModel: String?
+    
+    @IBOutlet weak var carModelLabel: UILabel!
+    @IBOutlet weak var carMakeLabel: UILabel!
+    @IBOutlet weak var carYearLabel: UILabel!
+    @IBOutlet weak var carImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +28,11 @@ class CarTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected 
-       print(self.carModel)
+//       self.carModelLabel.text = self.car
+        
+
+        self.carModelLabel.text = self.car?["make"].stringValue
+        
     }
     
 }
