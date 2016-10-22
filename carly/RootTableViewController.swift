@@ -16,8 +16,8 @@ class RootTableViewController: UITableViewController {
     var carDataArray: [JSON]?
     
     override func viewDidLoad() {
-        tableView.estimatedRowHeight = 85.0
-        tableView.rowHeight = UITableViewAutomaticDimension
+      
+        tableView.rowHeight = 100
         
         self.carDataArray = carData.arrayValue
         

@@ -16,6 +16,7 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var carModelLabel: UILabel!
     @IBOutlet weak var carMakeLabel: UILabel!
     @IBOutlet weak var carYearLabel: UILabel!
+    @IBOutlet weak var carMileageLabel: UILabel!
     @IBOutlet weak var carImageView: UIImageView!
     
     
@@ -30,9 +31,11 @@ class CarTableViewCell: UITableViewCell {
         // Configure the view for the selected 
 //       self.carModelLabel.text = self.car
         
-
-        self.carModelLabel.text = self.car?["make"].stringValue
-        
+        print(self.car)
+        self.carMakeLabel.text = self.car?["make"].stringValue
+        self.carModelLabel.text = self.car?["model"].stringValue
+        self.carYearLabel.text = self.car?["year"].stringValue
+        self.carMileageLabel.text = self.car?["mileage"].stringValue
     }
     
 }
