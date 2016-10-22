@@ -1,7 +1,9 @@
 PODS:
+  - SwiftSpinner (1.0.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - SwiftSpinner
   - SwiftyJSON (from `https://github.com/BaiduHiDeviOS/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
@@ -15,8 +17,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/BaiduHiDeviOS/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  SwiftSpinner: 1c80ff6ea1c47e2faa1dfce0fcd5e6b39a47fd51
   SwiftyJSON: 6118fb49d7519c4d31a0c1f3d5af936e9047b556
 
-PODFILE CHECKSUM: 6afd8f3bb3d25761c2ef34143fb0618050b84902
+PODFILE CHECKSUM: 9c6cf5777e5b1acb4b55242010d9cd126ec77524
 
 COCOAPODS: 1.0.1
