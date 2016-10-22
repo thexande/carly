@@ -1,0 +1,6 @@
+framework module Pods_carlyUITests {
+  umbrella header "Pods-carlyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

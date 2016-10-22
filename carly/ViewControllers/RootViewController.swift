@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 class RootViewController: UIViewController {
 
@@ -17,8 +19,16 @@ class RootViewController: UIViewController {
     @IBAction func expandView(_ sender: AnyObject) {
         UIView.animate(withDuration: 0.7, animations: {
             var carViewFrame = self.carSubView.frame
+            var carTableFrame = self.carsTable.frame
+            
             carViewFrame.origin.y -= carViewFrame.size.height
             self.carSubView.frame = carViewFrame
+            
+            //CGRect newTableFrame = carTableFrame
+            //newTableFrame.size = CGSizeMake(carTableFrame.size.width)
+            carTableFrame.origin.y -= carViewFrame.size.height
+            carTableFrame.size.height += carViewFrame.size.height
+            self.carsTable.frame = carTableFrame
             
             // table view
 //            var tableViewFrame = self.carsTable.frame

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39589B682132550FB93F6C98 /* Pods_carlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B00FA36D0887279B989BE4 /* Pods_carlyUITests.framework */; };
+		4DB6DCC1ACF1889DD27810DD /* Pods_carly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85A2A886ADBF88F31B35D8B /* Pods_carly.framework */; };
+		596E6BA47F95FF9B8917ECBC /* Pods_carlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4B54681B9202066D18181E /* Pods_carlyTests.framework */; };
 		B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27711DBA96AB00BC222A /* AppDelegate.swift */; };
 		B0AD27771DBA96AB00BC222A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AD27751DBA96AB00BC222A /* Main.storyboard */; };
 		B0AD27791DBA96AB00BC222A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0AD27781DBA96AB00BC222A /* Assets.xcassets */; };
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02C77CF15DC460CB0E837A48 /* Pods-carly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carly.release.xcconfig"; path = "Pods/Target Support Files/Pods-carly/Pods-carly.release.xcconfig"; sourceTree = "<group>"; };
+		1FC859E201E4030A7B7E1642 /* Pods-carlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carlyTests/Pods-carlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		37B00FA36D0887279B989BE4 /* Pods_carlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		540A3B3001EB66D860D010C9 /* Pods-carlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carlyUITests/Pods-carlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7748C0B8E064C5F7EFC017B0 /* Pods-carly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carly/Pods-carly.debug.xcconfig"; sourceTree = "<group>"; };
+		9A4B54681B9202066D18181E /* Pods_carlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AD276E1DBA96AB00BC222A /* carly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AD27711DBA96AB00BC222A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0AD27761DBA96AB00BC222A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +64,9 @@
 		B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Views/CarTableViewCell.swift; sourceTree = "<group>"; };
 		B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarTableViewCell.xib; path = Views/CarTableViewCell.xib; sourceTree = "<group>"; };
+		D0BA33077C536FAD2CB1DE6B /* Pods-carlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carlyUITests/Pods-carlyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D85A2A886ADBF88F31B35D8B /* Pods_carly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4EDDFE7EEE79EC38A277BE3 /* Pods-carlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carlyTests/Pods-carlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB6DCC1ACF1889DD27810DD /* Pods_carly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596E6BA47F95FF9B8917ECBC /* Pods_carlyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39589B682132550FB93F6C98 /* Pods_carlyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E47F4BAD2451F83347796B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D85A2A886ADBF88F31B35D8B /* Pods_carly.framework */,
+				9A4B54681B9202066D18181E /* Pods_carlyTests.framework */,
+				37B00FA36D0887279B989BE4 /* Pods_carlyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0AD27651DBA96AB00BC222A = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +114,8 @@
 				B0AD27851DBA96AC00BC222A /* carlyTests */,
 				B0AD27901DBA96AC00BC222A /* carlyUITests */,
 				B0AD276F1DBA96AB00BC222A /* Products */,
+				DE5949F9DBC37E2C4CCD45D3 /* Pods */,
+				6E47F4BAD2451F83347796B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +180,19 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		DE5949F9DBC37E2C4CCD45D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7748C0B8E064C5F7EFC017B0 /* Pods-carly.debug.xcconfig */,
+				02C77CF15DC460CB0E837A48 /* Pods-carly.release.xcconfig */,
+				E4EDDFE7EEE79EC38A277BE3 /* Pods-carlyTests.debug.xcconfig */,
+				1FC859E201E4030A7B7E1642 /* Pods-carlyTests.release.xcconfig */,
+				540A3B3001EB66D860D010C9 /* Pods-carlyUITests.debug.xcconfig */,
+				D0BA33077C536FAD2CB1DE6B /* Pods-carlyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0AD27961DBA96AC00BC222A /* Build configuration list for PBXNativeTarget "carly" */;
 			buildPhases = (
+				5E5697CBF3C41A18F6F2511F /* [CP] Check Pods Manifest.lock */,
 				B0AD276A1DBA96AB00BC222A /* Sources */,
 				B0AD276B1DBA96AB00BC222A /* Frameworks */,
 				B0AD276C1DBA96AB00BC222A /* Resources */,
+				D0C19BE5068AC50569029DCA /* [CP] Embed Pods Frameworks */,
+				2B1EAAA94BE82BE5044CD2F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0AD27991DBA96AC00BC222A /* Build configuration list for PBXNativeTarget "carlyTests" */;
 			buildPhases = (
+				96C3843C20BF685E3E28E2BE /* [CP] Check Pods Manifest.lock */,
 				B0AD277E1DBA96AB00BC222A /* Sources */,
 				B0AD277F1DBA96AB00BC222A /* Frameworks */,
 				B0AD27801DBA96AB00BC222A /* Resources */,
+				F16EFB1D8090E647CCBEB6E8 /* [CP] Embed Pods Frameworks */,
+				DD086B22A354E8F411F9F1EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0AD279C1DBA96AC00BC222A /* Build configuration list for PBXNativeTarget "carlyUITests" */;
 			buildPhases = (
+				3CF7ABCF35D4BA86EB314ED2 /* [CP] Check Pods Manifest.lock */,
 				B0AD27891DBA96AC00BC222A /* Sources */,
 				B0AD278A1DBA96AC00BC222A /* Frameworks */,
 				B0AD278B1DBA96AC00BC222A /* Resources */,
+				DFB1589DB92609261934C535 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +334,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B1EAAA94BE82BE5044CD2F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carly/Pods-carly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CF7ABCF35D4BA86EB314ED2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E5697CBF3C41A18F6F2511F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96C3843C20BF685E3E28E2BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C19BE5068AC50569029DCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carly/Pods-carly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD086B22A354E8F411F9F1EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carlyTests/Pods-carlyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB1589DB92609261934C535 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carlyUITests/Pods-carlyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16EFB1D8090E647CCBEB6E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carlyTests/Pods-carlyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B0AD276A1DBA96AB00BC222A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,6 +539,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -418,6 +590,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -445,7 +618,9 @@
 		};
 		B0AD27971DBA96AC00BC222A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7748C0B8E064C5F7EFC017B0 /* Pods-carly.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9L49SS68XP;
 				INFOPLIST_FILE = carly/Info.plist;
@@ -458,7 +633,9 @@
 		};
 		B0AD27981DBA96AC00BC222A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02C77CF15DC460CB0E837A48 /* Pods-carly.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9L49SS68XP;
 				INFOPLIST_FILE = carly/Info.plist;
@@ -471,6 +648,7 @@
 		};
 		B0AD279A1DBA96AC00BC222A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EDDFE7EEE79EC38A277BE3 /* Pods-carlyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +664,7 @@
 		};
 		B0AD279B1DBA96AC00BC222A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC859E201E4030A7B7E1642 /* Pods-carlyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +680,7 @@
 		};
 		B0AD279D1DBA96AC00BC222A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540A3B3001EB66D860D010C9 /* Pods-carlyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9L49SS68XP;
@@ -515,6 +695,7 @@
 		};
 		B0AD279E1DBA96AC00BC222A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0BA33077C536FAD2CB1DE6B /* Pods-carlyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9L49SS68XP;
