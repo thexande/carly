@@ -38,7 +38,7 @@
                             <constraint firstItem="4a9-5X-rpn" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="3eq-M4-hgv"/>
                             <constraint firstAttribute="trailing" secondItem="4a9-5X-rpn" secondAttribute="trailing" id="5eO-I0-S7H"/>
                             <constraint firstItem="4a9-5X-rpn" firstAttribute="height" secondItem="8X6-1N-Z6H" secondAttribute="height" multiplier="0.3" id="B4v-wb-KSp"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="top" secondItem="8X6-1N-Z6H" secondAttribute="top" constant="108" id="O38-Na-cFF"/>
+                            <constraint firstItem="9mt-dx-JUd" firstAttribute="height" secondItem="8X6-1N-Z6H" secondAttribute="height" multiplier="0.54" id="NY1-p9-JGB"/>
                             <constraint firstItem="4a9-5X-rpn" firstAttribute="leading" secondItem="YQI-xv-pNX" secondAttribute="leading" id="ZPT-AH-9dx"/>
                             <constraint firstItem="4a9-5X-rpn" firstAttribute="top" secondItem="YQI-xv-pNX" secondAttribute="bottom" id="noH-0J-cZk"/>
                             <constraint firstItem="4a9-5X-rpn" firstAttribute="trailing" secondItem="9mt-dx-JUd" secondAttribute="trailing" id="qy6-l9-j5f"/>
@@ -47,6 +47,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP">
+                        <barButtonItem key="leftBarButtonItem" title="contract" id="XfZ-C0-lgk">
+                            <connections>
+                                <action selector="contract:" destination="8mg-vg-uHT" id="OvV-8P-xLW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="expand" id="GHy-01-BuV">
                             <connections>
                                 <action selector="expandView:" destination="8mg-vg-uHT" id="AJP-1V-vti"/>
@@ -55,7 +60,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="carSubView" destination="4a9-5X-rpn" id="04q-TS-Moz"/>
-                        <outlet property="carsTable" destination="9mt-dx-JUd" id="QyT-8O-NBY"/>
+                        <outlet property="carTable" destination="9mt-dx-JUd" id="vZE-2D-eyz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,20 +72,9 @@
             <objects>
                 <tableViewController id="rpe-fn-OIP" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="drP-4J-ofg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="359"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1T6-Tp-3v3">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1T6-Tp-3v3" id="aCE-Sx-nhn">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="CarCell"/>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="rpe-fn-OIP" id="sdI-V7-TEa"/>
                             <outlet property="delegate" destination="rpe-fn-OIP" id="5dy-O9-pXk"/>

@@ -21,6 +21,7 @@
 		B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */; };
 		B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */; };
 		B0DCECDB1DBAB9EA00202ABB /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */; };
+		B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Views/CarTableViewCell.swift; sourceTree = "<group>"; };
 		B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarTableViewCell.xib; path = Views/CarTableViewCell.xib; sourceTree = "<group>"; };
+		B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationHelper.swift; path = Helpers/AnimationHelper.swift; sourceTree = "<group>"; };
 		D0BA33077C536FAD2CB1DE6B /* Pods-carlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carlyUITests/Pods-carlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D85A2A886ADBF88F31B35D8B /* Pods_carly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EDDFE7EEE79EC38A277BE3 /* Pods-carlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carlyTests/Pods-carlyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		B0AD27701DBA96AB00BC222A /* carly */ = {
 			isa = PBXGroup;
 			children = (
+				B0DCECDC1DBBD59400202ABB /* Helpers */,
 				B0AD27A61DBA9DA400BC222A /* Views */,
 				B0AD27A31DBA9CB100BC222A /* ViewControllers */,
 				B0AD27711DBA96AB00BC222A /* AppDelegate.swift */,
@@ -178,6 +181,14 @@
 				B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		B0DCECDC1DBBD59400202ABB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		DE5949F9DBC37E2C4CCD45D3 /* Pods */ = {
@@ -464,6 +475,7 @@
 			files = (
 				B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */,
 				B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */,
+				B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */,
 				B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */,
 				B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */,
 				B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */,
