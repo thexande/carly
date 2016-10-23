@@ -33,6 +33,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvf-Kv-6RO">
+                                        <frame key="frameInset" minX="40" minY="89" width="79" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zv-sc-qU4">
+                                        <frame key="frameInset" minX="40" minY="118" width="73" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862941979999995" green="0.55722707510000002" blue="0.34095072749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -68,8 +82,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="carDetailMakeLabel" destination="3Zv-sc-qU4" id="8Y4-Wc-fpd"/>
+                        <outlet property="carDetailModelLabel" destination="Vvf-Kv-6RO" id="mXy-oK-6lw"/>
                         <outlet property="carSubView" destination="4a9-5X-rpn" id="04q-TS-Moz"/>
                         <outlet property="carTable" destination="9mt-dx-JUd" id="vZE-2D-eyz"/>
+                        <outlet property="detailCarMakeLabel" destination="3Zv-sc-qU4" id="FQh-ol-sg2"/>
+                        <outlet property="detailCarModelLabel" destination="Vvf-Kv-6RO" id="zhq-3j-oTj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>

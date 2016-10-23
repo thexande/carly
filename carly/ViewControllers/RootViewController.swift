@@ -15,6 +15,10 @@ class RootViewController: UIViewController {
     @IBOutlet weak var carSubView: CarlyHeaderView!
     @IBOutlet weak var carTable: UIView!
     
+    @IBOutlet weak var carDetailMakeLabel: UILabel!
+    @IBOutlet weak var carDetailModelLabel: UILabel!
+
+    
     @IBAction func contract(_ sender: AnyObject) {
         AnimationHelper.animateDown(carSubView: self.carSubView, carTable: self.carTable)
     }
