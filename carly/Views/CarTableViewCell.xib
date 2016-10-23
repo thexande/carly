@@ -50,6 +50,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="carImageView" destination="kph-kV-LRD" id="g9D-T0-k31"/>
                 <outlet property="carMakeLabel" destination="luD-3Z-EUC" id="sZu-qq-8Uy"/>
                 <outlet property="carMileageLabel" destination="2R4-5e-If3" id="fXa-gz-4hC"/>
                 <outlet property="carModelLabel" destination="xqL-sm-TrY" id="PsJ-fy-CHK"/>

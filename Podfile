@@ -5,7 +5,7 @@ target 'carly' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
-  # Pods for carly
+  pod 'SDWebImage'
 
   target 'carlyTests' do
     inherit! :search_paths

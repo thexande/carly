@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import SDWebImage
 
 
 class RootTableViewController: UITableViewController {
@@ -52,10 +53,23 @@ class RootTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as! CarTableViewCell
-    
+        let currentCar = self.carDataArray?[indexPath.row]
+//        sd web image
+        let remoteImageURLString = currentCar?["image_url"].stringValue
         
-         //Configure the cell...        
-        cell.car = self.carDataArray?[indexPath.row]
+        if (remoteImageURLString != nil) {
+            let remoteImageURL = NSURL(string: remoteImageURLString!)
+            print("url here", remoteImageURL?.absoluteString)
+            //        let imageBlock: SDWebImageCompletionBlock! = {(image: UIImage!, error: NSError!, cacheType: SDImageCacheType!, imageURL: NSURL!) -> Void in
+            //
+            //            print("Image with url \(remoteImageURL!.absoluteString) is loaded")
+            //
+            //        }
+            cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+        }
+        
+         //Configure the cell...
+        cell.car = currentCar
         return cell
     }
  
