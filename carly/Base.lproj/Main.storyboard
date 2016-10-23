@@ -10,13 +10,14 @@
         <!--CARLY-->
         <scene sceneID="D4y-OP-zMS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="8mg-vg-uHT" customClass="RootViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qOZ-F9-MCr"/>
                         <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-dx-JUd">
@@ -24,49 +25,23 @@
                                     <segue destination="rpe-fn-OIP" kind="embed" id="B0h-Z2-efH"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a9-5X-rpn" customClass="CarlyHeaderView" customModule="carly" customModuleProvider="target">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Select a car from the table below!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-WQ-3Nf">
-                                        <frame key="frameInset" minX="40" minY="48" width="312" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvf-Kv-6RO">
-                                        <frame key="frameInset" minX="40" minY="89" width="79" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zv-sc-qU4">
-                                        <frame key="frameInset" minX="40" minY="118" width="73" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96862941979999995" green="0.55722707510000002" blue="0.34095072749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YQI-xv-pNX">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="geW-zl-kpy">
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8mg-vg-uHT" id="Fpr-Ir-BNG"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="bottom" secondItem="YmN-ur-UJp" secondAttribute="top" id="0Nz-xr-eET"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="trailing" secondItem="YQI-xv-pNX" secondAttribute="trailing" id="3Pa-Cu-TRi"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="3eq-M4-hgv"/>
-                            <constraint firstAttribute="trailing" secondItem="4a9-5X-rpn" secondAttribute="trailing" id="5eO-I0-S7H"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="height" secondItem="8X6-1N-Z6H" secondAttribute="height" multiplier="0.3" id="B4v-wb-KSp"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="height" secondItem="8X6-1N-Z6H" secondAttribute="height" multiplier="0.54" id="NY1-p9-JGB"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="leading" secondItem="YQI-xv-pNX" secondAttribute="leading" id="ZPT-AH-9dx"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="top" secondItem="YQI-xv-pNX" secondAttribute="bottom" id="noH-0J-cZk"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="trailing" secondItem="9mt-dx-JUd" secondAttribute="trailing" id="qy6-l9-j5f"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="top" secondItem="4a9-5X-rpn" secondAttribute="bottom" id="s9a-B8-fTs"/>
-                            <constraint firstItem="4a9-5X-rpn" firstAttribute="leading" secondItem="9mt-dx-JUd" secondAttribute="leading" id="vQb-wP-2vS"/>
+                            <constraint firstItem="geW-zl-kpy" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="35D-yN-XV6"/>
+                            <constraint firstItem="geW-zl-kpy" firstAttribute="top" secondItem="qOZ-F9-MCr" secondAttribute="bottom" id="ZqZ-kR-aJT"/>
+                            <constraint firstAttribute="bottom" secondItem="9mt-dx-JUd" secondAttribute="bottom" id="aZA-gq-VqZ"/>
+                            <constraint firstItem="9mt-dx-JUd" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="dXm-AS-bCk"/>
+                            <constraint firstItem="geW-zl-kpy" firstAttribute="height" secondItem="9mt-dx-JUd" secondAttribute="height" multiplier="0.085" id="gQF-TY-6RS"/>
+                            <constraint firstAttribute="trailing" secondItem="geW-zl-kpy" secondAttribute="trailing" id="qDV-ye-MHY"/>
+                            <constraint firstItem="9mt-dx-JUd" firstAttribute="height" secondItem="8X6-1N-Z6H" secondAttribute="height" multiplier="0.84" id="ykW-fn-4my"/>
+                            <constraint firstAttribute="trailing" secondItem="9mt-dx-JUd" secondAttribute="trailing" id="yuT-gC-ALw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP">
@@ -82,15 +57,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="carDetailMakeLabel" destination="3Zv-sc-qU4" id="8Y4-Wc-fpd"/>
-                        <outlet property="carDetailModelLabel" destination="Vvf-Kv-6RO" id="mXy-oK-6lw"/>
-                        <outlet property="carSubView" destination="4a9-5X-rpn" id="04q-TS-Moz"/>
                         <outlet property="carTable" destination="9mt-dx-JUd" id="vZE-2D-eyz"/>
-                        <outlet property="detailCarMakeLabel" destination="3Zv-sc-qU4" id="FQh-ol-sg2"/>
-                        <outlet property="detailCarModelLabel" destination="Vvf-Kv-6RO" id="zhq-3j-oTj"/>
+                        <outlet property="searchDisplayController" destination="YF4-ut-aYT" id="GB0-ra-VIj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="YF4-ut-aYT">
+                    <connections>
+                        <outlet property="delegate" destination="8mg-vg-uHT" id="Q8l-wi-lw5"/>
+                        <outlet property="searchBar" destination="geW-zl-kpy" id="NDo-xm-WKE"/>
+                        <outlet property="searchContentsController" destination="8mg-vg-uHT" id="40w-1p-nrw"/>
+                        <outlet property="searchResultsDataSource" destination="8mg-vg-uHT" id="ofE-S5-Tj5"/>
+                        <outlet property="searchResultsDelegate" destination="8mg-vg-uHT" id="z0u-X5-5xk"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3416.8000000000002" y="141.67916041979012"/>
         </scene>
@@ -99,7 +78,7 @@
             <objects>
                 <tableViewController id="rpe-fn-OIP" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="drP-4J-ofg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="618.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
