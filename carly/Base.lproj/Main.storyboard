@@ -12,7 +12,6 @@
                 <searchDisplayController id="YF4-ut-aYT">
                     <connections>
                         <outlet property="delegate" destination="8mg-vg-uHT" id="Q8l-wi-lw5"/>
-                        <outlet property="searchBar" destination="geW-zl-kpy" id="NDo-xm-WKE"/>
                         <outlet property="searchContentsController" destination="8mg-vg-uHT" id="40w-1p-nrw"/>
                         <outlet property="searchResultsDataSource" destination="8mg-vg-uHT" id="ofE-S5-Tj5"/>
                         <outlet property="searchResultsDelegate" destination="8mg-vg-uHT" id="z0u-X5-5xk"/>
@@ -28,87 +27,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mt-dx-JUd">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-54-Nn0">
                                 <connections>
-                                    <segue destination="rpe-fn-OIP" kind="embed" id="B0h-Z2-efH"/>
+                                    <segue destination="FPp-Jw-5gs" kind="embed" id="k6w-oc-2pj"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9mt-dx-JUd" secondAttribute="trailing" id="Vvp-hm-qIT"/>
-                            <constraint firstItem="YmN-ur-UJp" firstAttribute="top" secondItem="9mt-dx-JUd" secondAttribute="bottom" id="edi-1V-SVc"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="kd3-4p-yen"/>
-                            <constraint firstItem="9mt-dx-JUd" firstAttribute="top" secondItem="qOZ-F9-MCr" secondAttribute="bottom" id="kqe-Jq-FIx"/>
+                            <constraint firstItem="D5I-54-Nn0" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="0Bi-QY-5Ng"/>
+                            <constraint firstItem="D5I-54-Nn0" firstAttribute="top" secondItem="qOZ-F9-MCr" secondAttribute="bottom" id="Z8Z-6P-UQf"/>
+                            <constraint firstItem="YmN-ur-UJp" firstAttribute="top" secondItem="D5I-54-Nn0" secondAttribute="bottom" id="nAb-Kf-FVt"/>
+                            <constraint firstAttribute="trailing" secondItem="D5I-54-Nn0" secondAttribute="trailing" id="w2F-p1-M1o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP">
-                        <barButtonItem key="leftBarButtonItem" title="contract" id="XfZ-C0-lgk">
-                            <connections>
-                                <action selector="contract:" destination="8mg-vg-uHT" id="OvV-8P-xLW"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="expand" id="GHy-01-BuV">
-                            <connections>
-                                <action selector="expandView:" destination="8mg-vg-uHT" id="AJP-1V-vti"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP"/>
                     <connections>
-                        <outlet property="carTable" destination="9mt-dx-JUd" id="vZE-2D-eyz"/>
                         <outlet property="searchDisplayController" destination="YF4-ut-aYT" id="GB0-ra-VIj"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3416.8000000000002" y="141.67916041979012"/>
-        </scene>
-        <!--Root Table View Controller-->
-        <scene sceneID="qvC-KM-aiB">
-            <objects>
-                <tableViewController id="rpe-fn-OIP" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="drP-4J-ofg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="kUg-hs-71x">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="351"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geW-zl-kpy">
-                                    <frame key="frameInset" height="53"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="8mg-vg-uHT" id="Fpr-Ir-BNG"/>
-                                    </connections>
-                                </searchBar>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f58-pJ-1yd">
-                                    <frame key="frameInset" minY="53" width="414" height="147"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="tVk-ah-QEr">
-                            <rect key="frame" x="0.0" y="351" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <connections>
-                                <segue destination="dcH-g1-FTV" kind="embed" id="GqU-qy-8G2"/>
-                            </connections>
-                        </containerView>
-                        <connections>
-                            <outlet property="dataSource" destination="rpe-fn-OIP" id="sdI-V7-TEa"/>
-                            <outlet property="delegate" destination="rpe-fn-OIP" id="5dy-O9-pXk"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <outlet property="tableView" destination="drP-4J-ofg" id="m6v-YZ-BMB"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0f-dm-SeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4263.768115942029" y="142.79891304347825"/>
+            <point key="canvasLocation" x="3415.9420289855075" y="141.03260869565219"/>
         </scene>
         <!--Root Navigation View Controller-->
         <scene sceneID="hhl-dO-yIR">
@@ -128,19 +67,66 @@
             </objects>
             <point key="canvasLocation" x="2515.9420289855075" y="144.29347826086956"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0DL-2x-dAI">
+        <!--Car Component View Controller-->
+        <scene sceneID="N5v-T2-p2r">
             <objects>
-                <viewController id="dcH-g1-FTV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J4k-l5-gJq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <viewController id="FPp-Jw-5gs" customClass="CarComponentViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCZ-Uo-WY0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAa-0o-QU2">
+                                <frame key="frameInset" height="416" maxX="1" maxY="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="XGb-wT-QAZ" kind="embed" id="oQJ-do-nNK"/>
+                                </connections>
+                            </containerView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gx-8k-oB3">
+                                <frame key="frameInset" height="44" maxX="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FPp-Jw-5gs" id="IUl-hR-TvJ"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="nCM-bj-Gwb" id="6S4-dl-KUQ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JXy-Ha-dQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uck-tQ-eNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="nCM-bj-Gwb">
+                    <connections>
+                        <outlet property="delegate" destination="FPp-Jw-5gs" id="3mD-zm-Oss"/>
+                        <outlet property="searchBar" destination="2gx-8k-oB3" id="Sjj-D1-WcG"/>
+                        <outlet property="searchContentsController" destination="FPp-Jw-5gs" id="Dgk-4c-f0Z"/>
+                        <outlet property="searchResultsDataSource" destination="FPp-Jw-5gs" id="lga-ki-w48"/>
+                        <outlet property="searchResultsDelegate" destination="FPp-Jw-5gs" id="Oai-Ok-c8y"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4264" y="647"/>
+            <point key="canvasLocation" x="4350.7246376811599" y="142.66304347826087"/>
+        </scene>
+        <!--Root Table View Controller-->
+        <scene sceneID="Bci-4p-T2e">
+            <objects>
+                <tableViewController id="XGb-wT-QAZ" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BP9-s4-moQ">
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="XGb-wT-QAZ" id="AZ3-aa-PnX"/>
+                            <outlet property="delegate" destination="XGb-wT-QAZ" id="dPu-BP-bNo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usi-Ok-QTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4351" y="822"/>
         </scene>
     </scenes>
 </document>
