@@ -14,6 +14,8 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBOutlet weak var tblSearchResults: UITableView!
     @IBOutlet weak var carDetailView: UIView!
+    @IBOutlet weak var carDetailImage: UIImageView!
+    
     let carData: JSON = CarModel.getAllCars()!
     var carDataArray: [JSON]? = []
     var filteredCarArray: [JSON]? = []
@@ -34,6 +36,7 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
 
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
+        tblSearchResults.separatorColor = UIColor.black
         
         loadListOfCountries()
         
@@ -69,8 +72,6 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as! CarTableViewCell
-        
-        
         if shouldShowSearchResults {
             let currentCar = self.filteredCarArray?[indexPath.row]
            
@@ -80,9 +81,6 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
                 cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
             }
             cell.car = currentCar
-
-            
-            //cell.textLabel?.text = filteredArray[(indexPath as NSIndexPath).row]
         }
         else {
             let currentCar = self.carDataArray?[indexPath.row]
@@ -92,21 +90,35 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
                 cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
             }
             cell.car = currentCar
-
-            
-            //cell.textLabel?.text = dataArray[(indexPath as NSIndexPath).row]
         }
-        
-        
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
     
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("row selected: ", indexPath.row)
+        
+        if shouldShowSearchResults {
+            let currentCar = self.filteredCarArray?[indexPath.row]
+            
+            let remoteImageURLString = currentCar?["image_url"].stringValue
+            if (remoteImageURLString != nil) {
+                let remoteImageURL = NSURL(string: remoteImageURLString!)
+                carDetailImage.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+            }
+        }
+        else {
+            let currentCar = self.carDataArray?[indexPath.row]
+            let remoteImageURLString = currentCar?["image_url"].stringValue
+            if (remoteImageURLString != nil) {
+                let remoteImageURL = NSURL(string: remoteImageURLString!)
+                carDetailImage.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+            }
+        }
+    }
     // MARK: Custom functions
     
     func loadListOfCountries() {
@@ -141,19 +153,12 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
         tblSearchResults.tableHeaderView = searchController.searchBar
     }
     
-    
     func configureCustomSearchController() {
-        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: tblSearchResults.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orange, searchBarTintColor: UIColor.black)
-        
-        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
-
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: tblSearchResults.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor.purple)
+        customSearchController.customSearchBar.placeholder = "Search For Your Next Car!"
         carDetailView.addSubview(customSearchController.customSearchBar)
-
-
-        
         customSearchController.customDelegate = self
     }
-    
     
     // MARK: UISearchBarDelegate functions
     
