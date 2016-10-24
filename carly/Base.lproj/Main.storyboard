@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-54-Nn0">
@@ -77,7 +77,7 @@
                         <viewControllerLayoutGuide type="bottom" id="d5L-Y4-WY0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fCZ-Uo-WY0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-UU-vgH">
@@ -107,6 +107,7 @@
                         <constraints>
                             <constraint firstItem="2nR-99-wRF" firstAttribute="trailing" secondItem="WVp-HG-1j2" secondAttribute="trailing" id="GE9-s9-vet"/>
                             <constraint firstItem="dEl-UU-vgH" firstAttribute="top" secondItem="9R7-q4-sAO" secondAttribute="bottom" id="JoZ-il-bI8"/>
+                            <constraint firstItem="dEl-UU-vgH" firstAttribute="width" secondItem="fCZ-Uo-WY0" secondAttribute="width" id="LA4-2q-Eks"/>
                             <constraint firstItem="2nR-99-wRF" firstAttribute="height" secondItem="fCZ-Uo-WY0" secondAttribute="height" multiplier="0.3" id="LfD-gg-TmW"/>
                             <constraint firstItem="dEl-UU-vgH" firstAttribute="leading" secondItem="fCZ-Uo-WY0" secondAttribute="leading" id="NOn-ge-1k3"/>
                             <constraint firstItem="2nR-99-wRF" firstAttribute="leading" secondItem="dEl-UU-vgH" secondAttribute="leading" id="Nhn-Of-csi"/>
@@ -145,7 +146,7 @@
             <objects>
                 <tableViewController id="XGb-wT-QAZ" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BP9-s4-moQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>

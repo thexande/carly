@@ -18,14 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // style header
         let navigationBarAppearace = UINavigationBar.appearance()
+        
         navigationBarAppearace.tintColor = UIColor(red:0.20, green:0.01, blue:0.40, alpha:1.0)
         navigationBarAppearace.barTintColor = UIColor(red:0.20, green:0.01, blue:0.40, alpha:1.0)
+        
         // change navigation item title color
         navigationBarAppearace.titleTextAttributes = [
             NSForegroundColorAttributeName:UIColor.white,
-            NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 20)!
+            NSFontAttributeName: UIFont(name: "Arial Rounded MT Bold", size: 20)!
         ]
-        // UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        
+        
+        
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         return true
     }
 

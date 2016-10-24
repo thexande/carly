@@ -155,7 +155,7 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func configureCustomSearchController() {
-        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: tblSearchResults.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Arial Rounded MT Bold", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor(red:0.20, green:0.01, blue:0.40, alpha:1.0))
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: searchView.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Arial Rounded MT Bold", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor(red:0.20, green:0.01, blue:0.40, alpha:1.0))
         customSearchController.customSearchBar.placeholder = "Search For Your Next Car!"
         searchView.addSubview(customSearchController.customSearchBar)
         customSearchController.customDelegate = self
