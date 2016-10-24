@@ -9,10 +9,10 @@
 import UIKit
 
 class RootNavigationViewController: UINavigationController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            let rootViewController = self.navigationController?.viewControllers[0] as! RootViewController
+            print(rootViewController.)
  
         // Do any additional setup after loading the view.
     }

@@ -78,6 +78,11 @@ class SpeechSearchViewController: UIViewController, SFSpeechRecognizerDelegate  
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showResults") {
+            let destination = segue.destination as! RootNavigationViewController
+        }
+    }
     // [START speech recognition helper methods]
     private func prepareRecognizer(locale: Locale) {
         speechRecognizer = SFSpeechRecognizer(locale: locale)!
@@ -116,7 +121,7 @@ class SpeechSearchViewController: UIViewController, SFSpeechRecognizerDelegate  
                 
                 if(isFinal == true) {
                     // attempt to parse binary choices from user input
-                    //self.performSegue(withIdentifier: "confirmPoll", sender: self)
+                    self.performSegue(withIdentifier: "showResults", sender: self)
                     print("user spech here ", self.userSpeechString)
                     
                 }
