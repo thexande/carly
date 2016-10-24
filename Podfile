@@ -6,6 +6,7 @@ target 'carly' do
   use_frameworks!
   pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
   pod 'SDWebImage'
+  pod 'DZNEmptyDataSet'
 
   target 'carlyTests' do
     inherit! :search_paths

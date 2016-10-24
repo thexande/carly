@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-carly.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -31,32 +36,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1D79083C7089D53FFAF9676E618FFEB3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5341B7073D2E773AED16829B03464828</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E5DBD8435756A811CCEA1EDAF860265</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8FFE6E5A412B28D24DE95B23BED7D326</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC1F02E3E1CB8825D9B06F7101773A4F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
