@@ -13,16 +13,25 @@ import SDWebImage
 class CarComponentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, CustomSearchControllerDelegate {
 
     @IBOutlet weak var tblSearchResults: UITableView!
+    let carData: JSON = CarModel.getAllCars()!
+    var carDataArray: [JSON]?
+    var filteredCarArray: [JSON]?
+    
     var dataArray = [String]()
     var filteredArray = [String]()
-    var shouldShowSearchResults = fals
+    var shouldShowSearchResults = false
     var searchController: UISearchController!
     var customSearchController: CustomSearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        // register cell nib
+        tblSearchResults.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: "CarCell")
+        // set car data array
+        self.carDataArray = carData.arrayValue
+
+
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
         
@@ -157,6 +166,13 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
             return (countryText.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
+        filteredCarArray = carDataArray?.filter({ (car) -> Bool in
+            let carMake: NSString = car["make"].stringValue as NSString
+            return (carMake.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+        })
+        
+        
+        print(filteredCarArray)
         // Reload the tableview.
         tblSearchResults.reloadData()
     }
@@ -191,7 +207,12 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
             
             return (countryText.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
+        filteredCarArray = carDataArray?.filter({ (car) -> Bool in
+            let carMake: NSString = car["make"].stringValue as NSString
+            return (carMake.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+        })
         
+        print(filteredCarArray)
         // Reload the tableview.
         tblSearchResults.reloadData()
     }
