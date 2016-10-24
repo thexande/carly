@@ -9,8 +9,18 @@
 import UIKit
 import SwiftyJSON
 import SDWebImage
+import DZNEmptyDataSet
 
-class CarComponentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, CustomSearchControllerDelegate {
+
+class CarComponentViewController:
+    UIViewController,
+    UITableViewDelegate,
+    UITableViewDataSource,
+    UISearchResultsUpdating,
+    UISearchBarDelegate,
+    CustomSearchControllerDelegate,
+    DZNEmptyDataSetSource,
+    DZNEmptyDataSetDelegate {
 
     @IBOutlet weak var tblSearchResults: UITableView!
     @IBOutlet weak var carDetailView: UIView!
@@ -39,7 +49,11 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
         tblSearchResults.dataSource = self
         tblSearchResults.separatorColor = UIColor.black
         
-        loadListOfCountries()
+        //empty data set
+        tblSearchResults.emptyDataSetSource = self
+        tblSearchResults.emptyDataSetDelegate = self
+        tblSearchResults.tableFooterView = UIView()
+        
         
         // Uncomment the following line to enable the default search controller.
         //configureSearchController()
@@ -51,6 +65,37 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: DZNDataSource
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+    return UIImage(named: "carly_splash")
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+    let text = "You have no items"
+    let attribs = [
+    NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18),
+    NSForegroundColorAttributeName: UIColor.darkGray
+    ]
+    
+    return NSAttributedString(string: text, attributes: attribs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+    let text = "Add items to track the things that are important to you. Add your first item by tapping the + button."
+    
+    let para = NSMutableParagraphStyle()
+    para.lineBreakMode = NSLineBreakMode.byWordWrapping
+    para.alignment = NSTextAlignment.center
+    
+    let attribs = [
+    NSFontAttributeName: UIFont.systemFont(ofSize: 14),
+    NSForegroundColorAttributeName: UIColor.lightGray,
+    NSParagraphStyleAttributeName: para
+    ]
+    
+    return NSAttributedString(string: text, attributes: attribs)
     }
     
     
