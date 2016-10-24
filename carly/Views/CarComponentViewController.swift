@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import SDWebImage
 import DZNEmptyDataSet
+import Foundation
 
 
 class CarComponentViewController:
@@ -210,17 +211,17 @@ class CarComponentViewController:
         guard let searchString = searchController.searchBar.text else {
             return
         }
-        
-        // Filter the data array and get only those countries that match the search text.
-        filteredArray = dataArray.filter({ (country) -> Bool in
-            let countryText:NSString = country as NSString
-            
-            return (countryText.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-        })
+
         
         filteredCarArray = carDataArray?.filter({ (car) -> Bool in
             let carMake: NSString = car["make"].stringValue as NSString
-            return (carMake.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+            let carModel: NSString = car["model"].stringValue as NSString
+            let carYear: NSString = car["year"].stringValue as NSString
+            
+            
+            let carDataString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
+            print(carDataString)
+            return (carDataString.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
         
@@ -252,15 +253,16 @@ class CarComponentViewController:
     
     
     func didChangeSearchText(_ searchText: String) {
-        // Filter the data array and get only those countries that match the search text.
-        filteredArray = dataArray.filter({ (country) -> Bool in
-            let countryText: NSString = country as NSString
-            
-            return (countryText.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-        })
+
         filteredCarArray = carDataArray?.filter({ (car) -> Bool in
             let carMake: NSString = car["make"].stringValue as NSString
-            return (carMake.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+            let carModel: NSString = car["model"].stringValue as NSString
+            let carYear: NSString = car["year"].stringValue as NSString
+            
+            
+            let carDataString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
+            print(carDataString)
+            return (carDataString.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
         // Reload the tableview.
