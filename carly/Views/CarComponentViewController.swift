@@ -157,6 +157,10 @@ class CarComponentViewController:
         
         if shouldShowSearchResults {
             let currentCar = self.filteredCarArray?[indexPath.row]
+            carDetailMakeLabel.text = currentCar?["make"].stringValue
+            carDetailModelLabel.text = currentCar?["model"].stringValue
+            carDetailYearLabel.text = currentCar?["year"].stringValue
+            carDetailMileage.text = currentCar?["mileage"].stringValue
             
             let remoteImageURLString = currentCar?["image_url"].stringValue
             if (remoteImageURLString != nil) {
@@ -166,6 +170,10 @@ class CarComponentViewController:
         }
         else {
             let currentCar = self.carDataArray?[indexPath.row]
+            carDetailMakeLabel.text = currentCar?["make"].stringValue
+            carDetailModelLabel.text = currentCar?["model"].stringValue
+            carDetailYearLabel.text = currentCar?["year"].stringValue
+            carDetailMileage.text = currentCar?["mileage"].stringValue
             let remoteImageURLString = currentCar?["image_url"].stringValue
             if (remoteImageURLString != nil) {
                 let remoteImageURL = NSURL(string: remoteImageURLString!)
@@ -256,6 +264,10 @@ class CarComponentViewController:
     // MARK: CustomSearchControllerDelegate functions
     
     func didStartSearching() {
+        if carDetailVisible {
+            AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
+            carDetailVisible = false
+        }
         shouldShowSearchResults = true
         tblSearchResults.reloadData()
     }

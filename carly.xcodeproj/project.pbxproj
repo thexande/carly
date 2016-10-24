@@ -22,6 +22,7 @@
 		B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */; };
 		B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA11DBE9494003BB9E6 /* StringScore.swift */; };
 		B0B80DA41DBE9EB8003BB9E6 /* vehicles_deduped.json in Resources */ = {isa = PBXBuildFile; fileRef = B0B80DA31DBE9EB8003BB9E6 /* vehicles_deduped.json */; };
+		B0B80DA61DBEB767003BB9E6 /* SpeechSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */; };
 		B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */; };
 		B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */; };
 		B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */; };
@@ -77,6 +78,7 @@
 		B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarlyHeaderView.swift; path = Views/CarlyHeaderView.swift; sourceTree = "<group>"; };
 		B0B80DA11DBE9494003BB9E6 /* StringScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringScore.swift; path = Helpers/StringScore.swift; sourceTree = "<group>"; };
 		B0B80DA31DBE9EB8003BB9E6 /* vehicles_deduped.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicles_deduped.json; sourceTree = "<group>"; };
+		B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechSearchViewController.swift; path = ViewControllers/SpeechSearchViewController.swift; sourceTree = "<group>"; };
 		B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
 		B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Views/CarTableViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */,
 				B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */,
 				B0DCECE81DBBE82000202ABB /* RootNavigationViewController.swift */,
+				B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B80DA61DBEB767003BB9E6 /* SpeechSearchViewController.swift in Sources */,
 				B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */,
 				B0DCECE51DBBE5AA00202ABB /* SwiftSpinner.swift in Sources */,
 				B06766311DBC7C510083723F /* CustomSearchBar.swift in Sources */,
