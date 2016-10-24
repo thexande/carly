@@ -9,7 +9,7 @@
 import UIKit
 
 class AnimationHelper {
-    static func animateUp(carSubView: CarlyHeaderView!, carTable: UIView) {
+    static func animateUp(carSubView: UIView, carTable: UIView) {
         UIView.animate(withDuration: 0.5, animations: {
             var carViewFrame = carSubView.frame
             var carTableFrame = carTable.frame
@@ -20,7 +20,7 @@ class AnimationHelper {
             carTable.frame = carTableFrame
         })
     }
-    static func animateDown(carSubView: CarlyHeaderView!, carTable: UIView) {
+    static func animateDown(carSubView: UIView, carTable: UIView) {
         UIView.animate(withDuration: 0.5, animations: {
             var carViewFrame = carSubView.frame
             var carTableFrame = carTable.frame

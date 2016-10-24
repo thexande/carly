@@ -47,7 +47,7 @@ class CarComponentViewController:
 
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
-        tblSearchResults.separatorColor = UIColor.black
+        tblSearchResults.separatorColor = UIColor.white
         
         //empty data set
         tblSearchResults.emptyDataSetSource = self
@@ -55,11 +55,17 @@ class CarComponentViewController:
         tblSearchResults.tableFooterView = UIView()
         
         
+
+        
         // Uncomment the following line to enable the default search controller.
         //configureSearchController()
         
         // Comment out the next line to disable the customized search controller and search bar and use the default ones. Also, uncomment the above line.
         configureCustomSearchController()
+        
+        // animate car detail view
+        print("animate")
+//        AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults)
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,31 +75,9 @@ class CarComponentViewController:
     
     // MARK: DZNDataSource
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let str = "Welcome"
+        let str = "No cars have matched your search. \n\n\n\n\n\n\n\n"
         let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
         return NSAttributedString(string: str, attributes: attrs)
-    }
-    
-    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-        let str = "Tap the button below to add your first grokkleglob."
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
-        return NSAttributedString(string: str, attributes: attrs)
-    }
-    
-//    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-//        return UIImage(named: "carly_splash")
-//    }
-    
-    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
-        let str = "Add Grokkleglob"
-        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)]
-        return NSAttributedString(string: str, attributes: attrs)
-    }
-    
-    func emptyDataSet(_ scrollView: UIScrollView, didTap button: UIButton) {
-        let ac = UIAlertController(title: "Button tapped!", message: nil, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Hurray", style: .default))
-        present(ac, animated: true)
     }
     
     
@@ -219,6 +203,7 @@ class CarComponentViewController:
     
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
         if !shouldShowSearchResults {
             shouldShowSearchResults = true
             tblSearchResults.reloadData()
@@ -262,7 +247,7 @@ class CarComponentViewController:
     
     
     func didTapOnSearchButton() {
-        if !shouldShowSearchResults {
+         if !shouldShowSearchResults {
             shouldShowSearchResults = true
             tblSearchResults.reloadData()
         }
