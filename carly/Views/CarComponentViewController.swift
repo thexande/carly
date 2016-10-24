@@ -13,9 +13,10 @@ import SDWebImage
 class CarComponentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, CustomSearchControllerDelegate {
 
     @IBOutlet weak var tblSearchResults: UITableView!
+    @IBOutlet weak var carDetailView: UIView!
     let carData: JSON = CarModel.getAllCars()!
-    var carDataArray: [JSON]?
-    var filteredCarArray: [JSON]?
+    var carDataArray: [JSON]? = []
+    var filteredCarArray: [JSON]? = []
     
     var dataArray = [String]()
     var filteredArray = [String]()
@@ -31,17 +32,16 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
         // set car data array
         self.carDataArray = carData.arrayValue
 
-
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
         
         loadListOfCountries()
         
         // Uncomment the following line to enable the default search controller.
-        configureSearchController()
+        //configureSearchController()
         
         // Comment out the next line to disable the customized search controller and search bar and use the default ones. Also, uncomment the above line.
-        //configureCustomSearchController()
+        configureCustomSearchController()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,30 +59,51 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if shouldShowSearchResults {
-            return filteredArray.count
+            return self.filteredCarArray!.count
         }
         else {
-            return dataArray.count
+            return self.carDataArray!.count
         }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as! CarTableViewCell
+        
         
         if shouldShowSearchResults {
-            cell.textLabel?.text = filteredArray[(indexPath as NSIndexPath).row]
+            let currentCar = self.filteredCarArray?[indexPath.row]
+           
+            let remoteImageURLString = currentCar?["image_url"].stringValue
+            if (remoteImageURLString != nil) {
+                let remoteImageURL = NSURL(string: remoteImageURLString!)
+                cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+            }
+            cell.car = currentCar
+
+            
+            //cell.textLabel?.text = filteredArray[(indexPath as NSIndexPath).row]
         }
         else {
-            cell.textLabel?.text = dataArray[(indexPath as NSIndexPath).row]
+            let currentCar = self.carDataArray?[indexPath.row]
+            let remoteImageURLString = currentCar?["image_url"].stringValue
+            if (remoteImageURLString != nil) {
+                let remoteImageURL = NSURL(string: remoteImageURLString!)
+                cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+            }
+            cell.car = currentCar
+
+            
+            //cell.textLabel?.text = dataArray[(indexPath as NSIndexPath).row]
         }
+        
         
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        return 100.0
     }
     
     
@@ -113,6 +134,9 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
         
+        // Include the search bar within the navigation bar.
+        //navigationItem.titleView = searchController.searchBar;
+        
         // Place the search bar view to the tableview headerview.
         tblSearchResults.tableHeaderView = searchController.searchBar
     }
@@ -122,7 +146,10 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
         customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: tblSearchResults.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orange, searchBarTintColor: UIColor.black)
         
         customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
-        tblSearchResults.tableHeaderView = customSearchController.customSearchBar
+
+        carDetailView.addSubview(customSearchController.customSearchBar)
+
+
         
         customSearchController.customDelegate = self
     }
@@ -172,7 +199,6 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
         })
         
         
-        print(filteredCarArray)
         // Reload the tableview.
         tblSearchResults.reloadData()
     }
@@ -212,7 +238,6 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
             return (carMake.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
-        print(filteredCarArray)
         // Reload the tableview.
         tblSearchResults.reloadData()
     }

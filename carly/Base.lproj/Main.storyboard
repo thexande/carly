@@ -83,30 +83,17 @@
                                 <frame key="frameInset" minY="190" width="413" height="482"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" textLabel="SqT-37-1Fg" style="IBUITableViewCellStyleDefault" id="meH-OC-QZo">
-                                        <rect key="frame" x="0.0" y="28" width="413" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="meH-OC-QZo" id="pkA-S7-Y9D">
-                                            <frame key="frameInset" width="413" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SqT-37-1Fg">
-                                                    <frame key="frameInset" minX="15" width="383" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nR-99-wRF">
+                                <frame key="frameInset" width="375" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="carDetailView" destination="2nR-99-wRF" id="V4P-OK-2qh"/>
                         <outlet property="searchDisplayController" destination="nCM-bj-Gwb" id="6S4-dl-KUQ"/>
                         <outlet property="tblSearchResults" destination="WVp-HG-1j2" id="2Ff-z3-Y66"/>
                     </connections>
@@ -121,7 +108,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4350.7246376811599" y="142.66304347826087"/>
+            <point key="canvasLocation" x="4349.6000000000004" y="142.57871064467767"/>
         </scene>
         <!--Root Table View Controller-->
         <scene sceneID="Bci-4p-T2e">
