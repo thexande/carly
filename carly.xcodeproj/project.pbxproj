@@ -13,6 +13,7 @@
 		B06766271DBC59D40083723F /* CarComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06766261DBC59D40083723F /* CarComponentViewController.swift */; };
 		B067662F1DBC7C3E0083723F /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067662E1DBC7C3E0083723F /* CustomSearchController.swift */; };
 		B06766311DBC7C510083723F /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06766301DBC7C510083723F /* CustomSearchBar.swift */; };
+		B06766331DBDC1180083723F /* countries.txt in Resources */ = {isa = PBXBuildFile; fileRef = B06766321DBDC1170083723F /* countries.txt */; };
 		B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27711DBA96AB00BC222A /* AppDelegate.swift */; };
 		B0AD27771DBA96AB00BC222A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AD27751DBA96AB00BC222A /* Main.storyboard */; };
 		B0AD27791DBA96AB00BC222A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0AD27781DBA96AB00BC222A /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		B06766261DBC59D40083723F /* CarComponentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarComponentViewController.swift; path = Views/CarComponentViewController.swift; sourceTree = "<group>"; };
 		B067662E1DBC7C3E0083723F /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSearchController.swift; path = ViewControllers/SearchControllers/CustomSearchController.swift; sourceTree = "<group>"; };
 		B06766301DBC7C510083723F /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSearchBar.swift; path = ViewControllers/SearchControllers/CustomSearchBar.swift; sourceTree = "<group>"; };
+		B06766321DBDC1170083723F /* countries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countries.txt; sourceTree = "<group>"; };
 		B0AD276E1DBA96AB00BC222A /* carly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AD27711DBA96AB00BC222A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0AD27761DBA96AB00BC222A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		B0AD27651DBA96AB00BC222A = {
 			isa = PBXGroup;
 			children = (
+				B06766321DBDC1170083723F /* countries.txt */,
 				B0AD27701DBA96AB00BC222A /* carly */,
 				B0AD27851DBA96AC00BC222A /* carlyTests */,
 				B0AD27901DBA96AC00BC222A /* carlyUITests */,
@@ -384,6 +387,7 @@
 				B0AD277C1DBA96AB00BC222A /* LaunchScreen.storyboard in Resources */,
 				B0DCECE31DBBDD4400202ABB /* vehicles.json in Resources */,
 				B0AD27791DBA96AB00BC222A /* Assets.xcassets in Resources */,
+				B06766331DBDC1180083723F /* countries.txt in Resources */,
 				B0DCECDB1DBAB9EA00202ABB /* CarTableViewCell.xib in Resources */,
 				B0AD27771DBA96AB00BC222A /* Main.storyboard in Resources */,
 			);
