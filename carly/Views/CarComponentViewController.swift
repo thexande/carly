@@ -68,34 +68,32 @@ class CarComponentViewController:
     }
     
     // MARK: DZNDataSource
-    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
-    return UIImage(named: "carly_splash")
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Welcome"
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
     }
     
-    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-    let text = "You have no items"
-    let attribs = [
-    NSFontAttributeName: UIFont.boldSystemFont(ofSize: 18),
-    NSForegroundColorAttributeName: UIColor.darkGray
-    ]
-    
-    return NSAttributedString(string: text, attributes: attribs)
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Tap the button below to add your first grokkleglob."
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        return NSAttributedString(string: str, attributes: attrs)
     }
     
-    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-    let text = "Add items to track the things that are important to you. Add your first item by tapping the + button."
+//    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+//        return UIImage(named: "carly_splash")
+//    }
     
-    let para = NSMutableParagraphStyle()
-    para.lineBreakMode = NSLineBreakMode.byWordWrapping
-    para.alignment = NSTextAlignment.center
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
+        let str = "Add Grokkleglob"
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
     
-    let attribs = [
-    NSFontAttributeName: UIFont.systemFont(ofSize: 14),
-    NSForegroundColorAttributeName: UIColor.lightGray,
-    NSParagraphStyleAttributeName: para
-    ]
-    
-    return NSAttributedString(string: text, attributes: attribs)
+    func emptyDataSet(_ scrollView: UIScrollView, didTap button: UIButton) {
+        let ac = UIAlertController(title: "Button tapped!", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Hurray", style: .default))
+        present(ac, animated: true)
     }
     
     
@@ -200,7 +198,7 @@ class CarComponentViewController:
     }
     
     func configureCustomSearchController() {
-        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: 300.0, height: 50.0), searchBarFont: UIFont(name: "Arial Rounded MT Bold", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor(red:0.20, green:0.01, blue:0.40, alpha:1.0))
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: tblSearchResults.frame.width, height: 50.0), searchBarFont: UIFont(name: "Arial Rounded MT Bold", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor(red:0.20, green:0.01, blue:0.40, alpha:1.0))
         customSearchController.customSearchBar.placeholder = "Search For Your Next Car!"
         searchView.addSubview(customSearchController.customSearchBar)
         customSearchController.customDelegate = self
