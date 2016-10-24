@@ -26,6 +26,7 @@ class CarComponentViewController:
     @IBOutlet weak var carDetailView: UIView!
     @IBOutlet weak var carDetailImage: UIImageView!
     @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var carDetailFooter: UIView!
     
     let carData: JSON = CarModel.getAllCars()!
     var carDataArray: [JSON]? = []
@@ -36,6 +37,7 @@ class CarComponentViewController:
     var shouldShowSearchResults = false
     var searchController: UISearchController!
     var customSearchController: CustomSearchController!
+    var carDetailVisible: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +56,6 @@ class CarComponentViewController:
         tblSearchResults.emptyDataSetDelegate = self
         tblSearchResults.tableFooterView = UIView()
         
-        
 
         
         // Uncomment the following line to enable the default search controller.
@@ -65,7 +66,7 @@ class CarComponentViewController:
         
         // animate car detail view
         print("animate")
-//        AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults)
+        AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
     }
     
     override func didReceiveMemoryWarning() {
@@ -127,7 +128,13 @@ class CarComponentViewController:
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
         print("row selected: ", indexPath.row)
+        if !carDetailVisible {
+            carDetailVisible = true
+            AnimationHelper.animateDown(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
+        }
+        
         
         if shouldShowSearchResults {
             let currentCar = self.filteredCarArray?[indexPath.row]
@@ -147,24 +154,8 @@ class CarComponentViewController:
             }
         }
     }
+    
     // MARK: Custom functions
-    
-    func loadListOfCountries() {
-        // Specify the path to the countries list file.
-        let pathToFile = Bundle.main.path(forResource: "countries", ofType: "txt")
-        
-        if let path = pathToFile {
-            // Load the file contents as a string.
-            let countriesString = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
-            
-            // Append the countries from the string to the dataArray array by breaking them using the line change character.
-            dataArray = countriesString.components(separatedBy: "\n")
-            
-            // Reload the tableview.
-            tblSearchResults.reloadData()
-        }
-    }
-    
     func configureSearchController() {
         // Initialize and perform a minimum configuration to the search controller.
         searchController = UISearchController(searchResultsController: nil)
