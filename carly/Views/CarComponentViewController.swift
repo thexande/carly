@@ -57,7 +57,7 @@ class CarComponentViewController:
         tblSearchResults.emptyDataSetDelegate = self
         tblSearchResults.tableFooterView = UIView()
         
-
+        print(self.carData.count)
         
         // Uncomment the following line to enable the default search controller.
         //configureSearchController()
@@ -108,7 +108,7 @@ class CarComponentViewController:
             let remoteImageURLString = currentCar?["image_url"].stringValue
             if (remoteImageURLString != nil) {
                 let remoteImageURL = NSURL(string: remoteImageURLString!)
-                cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+                cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "car"), options: SDWebImageOptions.progressiveDownload)
             }
             cell.car = currentCar
         }
@@ -117,7 +117,7 @@ class CarComponentViewController:
             let remoteImageURLString = currentCar?["image_url"].stringValue
             if (remoteImageURLString != nil) {
                 let remoteImageURL = NSURL(string: remoteImageURLString!)
-                cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+                cell.carImageView.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "car"), options: SDWebImageOptions.progressiveDownload)
             }
             cell.car = currentCar
         }
@@ -143,7 +143,7 @@ class CarComponentViewController:
             let remoteImageURLString = currentCar?["image_url"].stringValue
             if (remoteImageURLString != nil) {
                 let remoteImageURL = NSURL(string: remoteImageURLString!)
-                carDetailImage.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+                carDetailImage.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "car"), options: SDWebImageOptions.progressiveDownload)
             }
         }
         else {
@@ -151,7 +151,7 @@ class CarComponentViewController:
             let remoteImageURLString = currentCar?["image_url"].stringValue
             if (remoteImageURLString != nil) {
                 let remoteImageURL = NSURL(string: remoteImageURLString!)
-                carDetailImage.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "github-sign"), options: SDWebImageOptions.progressiveDownload)
+                carDetailImage.sd_setImage(with: remoteImageURL as URL!, placeholderImage: UIImage(named: "car"), options: SDWebImageOptions.progressiveDownload)
             }
         }
     }

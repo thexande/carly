@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class CarModel {
     static func getAllCars() -> JSON?  {
-        if let path = Bundle.main.path(forResource: "vehicles", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "vehicles_deduped", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = JSON(data: data)
