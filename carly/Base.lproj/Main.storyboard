@@ -84,12 +84,29 @@
                     <view key="view" contentMode="scaleToFill" id="nom-U1-n37">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="voice_button_state_1" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-Bn-wDE">
+                                <frame key="frameInset" minX="105" minY="296" width="138" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-WB-6Rg">
+                                <frame key="frameInset" minX="131" minY="294" width="86" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="searchButtonTouchDown:" destination="1ux-Oq-fVX" eventType="touchDown" id="0Es-ct-qlX"/>
+                                    <action selector="searchButtonTouchUpInside:" destination="1ux-Oq-fVX" eventType="touchUpInside" id="ICq-EO-ZEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.56852740049999995" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="speechButtonImage" destination="wfM-Bn-wDE" id="KhU-rQ-CCO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySr-O8-FxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4345" y="-503"/>
+            <point key="canvasLocation" x="4344.8000000000002" y="-503.29835082458777"/>
         </scene>
         <!--Car Component View Controller-->
         <scene sceneID="N5v-T2-p2r">
@@ -215,5 +232,6 @@
     </scenes>
     <resources>
         <image name="spedo_purp" width="768" height="714"/>
+        <image name="voice_button_state_1" width="725" height="690"/>
     </resources>
 </document>

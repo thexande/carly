@@ -9,7 +9,15 @@
 import UIKit
 
 class SpeechSearchViewController: UIViewController {
+    @IBOutlet weak var speechButtonImage: UIImageView!
 
+    @IBAction func searchButtonTouchUpInside(_ sender: AnyObject) {
+        speechButtonImage.image = UIImage(named: "voice_button_state_1")
+    }
+    @IBAction func searchButtonTouchDown(_ sender: AnyObject) {
+        speechButtonImage.image = UIImage(named: "voice_button_state_2")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
