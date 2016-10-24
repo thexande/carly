@@ -21,6 +21,7 @@
 		B0AD27871DBA96AC00BC222A /* carlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27861DBA96AC00BC222A /* carlyTests.swift */; };
 		B0AD27921DBA96AC00BC222A /* carlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27911DBA96AC00BC222A /* carlyUITests.swift */; };
 		B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */; };
+		B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA11DBE9494003BB9E6 /* StringScore.swift */; };
 		B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */; };
 		B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */; };
 		B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */; };
@@ -75,6 +76,7 @@
 		B0AD27911DBA96AC00BC222A /* carlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carlyUITests.swift; sourceTree = "<group>"; };
 		B0AD27931DBA96AC00BC222A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0AD27A41DBA9D9500BC222A /* CarlyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarlyHeaderView.swift; path = Views/CarlyHeaderView.swift; sourceTree = "<group>"; };
+		B0B80DA11DBE9494003BB9E6 /* StringScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringScore.swift; path = Helpers/StringScore.swift; sourceTree = "<group>"; };
 		B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
 		B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Views/CarTableViewCell.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */,
 				B0DCECE41DBBE5AA00202ABB /* SwiftSpinner.swift */,
 				B0DCECEA1DBC0C4200202ABB /* ImageDownloader.swift */,
+				B0B80DA11DBE9494003BB9E6 /* StringScore.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */,
 				B06766271DBC59D40083723F /* CarComponentViewController.swift in Sources */,
 				B0DCECEE1DBC0F8C00202ABB /* UIImageView.swift in Sources */,
+				B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */,
 				B0DCECEB1DBC0C4300202ABB /* ImageDownloader.swift in Sources */,
 				B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */,
 				B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */,

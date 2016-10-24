@@ -219,9 +219,12 @@ class CarComponentViewController:
             let carYear: NSString = car["year"].stringValue as NSString
             
             
-            let carDataString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
-            print(carDataString)
-            return (carDataString.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+            let carDataNSString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
+            let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
+            
+          //  print(carDataString.score(searchString))
+            return (carDataString.score(searchString) > 0.3)
+            //return (carDataNSString.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
         
@@ -260,9 +263,12 @@ class CarComponentViewController:
             let carYear: NSString = car["year"].stringValue as NSString
             
             
-            let carDataString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
-            print(carDataString)
-            return (carDataString.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+            let carDataNSString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
+            let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
+            
+           // print(carDataString.score(searchText))
+            return (carDataString.score(searchText) > 0.3)
+            //return (carDataNSString.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
         // Reload the tableview.
