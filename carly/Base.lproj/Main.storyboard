@@ -84,8 +84,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-UU-vgH">
+                                <frame key="frameInset" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nR-99-wRF">
-                                <frame key="frameInset" width="375" height="238"/>
+                                <frame key="frameInset" minY="49" width="375" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2No-c2-w1q">
@@ -100,16 +105,34 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-QQ-xiW">
-                                                    <frame key="frameInset" minX="25" minY="55" width="142" height="21"/>
+                                                    <frame key="frameInset" minX="8" minY="37" width="257" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
                                                     <color key="textColor" red="0.1973096728" green="0.0078403428200000003" blue="0.39902335410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-mX-pRd">
-                                                    <frame key="frameInset" minX="25" minY="15" width="142" height="21"/>
+                                                    <frame key="frameInset" minX="8" minY="8" width="142" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="37"/>
+                                                    <color key="textColor" red="0.1973096728" green="0.0078403428200000003" blue="0.39902335410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3o-ro-6kl">
+                                                    <frame key="frameInset" minX="8" minY="59" width="142" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                    <color key="textColor" red="0.1973096728" green="0.0078403428200000003" blue="0.39902335410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spedo_purp" translatesAutoresizingMaskIntoConstraints="NO" id="LZ4-dx-ve6">
+                                                    <frame key="frameInset" minX="339" minY="16" width="28" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mileage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxZ-Rv-m8z">
+                                                    <frame key="frameInset" minX="261" minY="8" width="70" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
                                                     <color key="textColor" red="0.1973096728" green="0.0078403428200000003" blue="0.39902335410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -120,17 +143,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-UU-vgH">
-                                <frame key="frameInset" minY="238" width="375" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="carDetailImage" destination="2No-c2-w1q" id="fye-A5-bFs"/>
+                        <outlet property="carDetailMakeLabel" destination="FDb-mX-pRd" id="Dbd-Qo-Zx2"/>
+                        <outlet property="carDetailMileage" destination="rxZ-Rv-m8z" id="bQa-V5-45v"/>
+                        <outlet property="carDetailModelLabel" destination="gIf-QQ-xiW" id="LbF-6N-0q5"/>
                         <outlet property="carDetailView" destination="2nR-99-wRF" id="V4P-OK-2qh"/>
+                        <outlet property="carDetailYearLabel" destination="r3o-ro-6kl" id="F0D-pp-KMR"/>
                         <outlet property="searchDisplayController" destination="nCM-bj-Gwb" id="6S4-dl-KUQ"/>
                         <outlet property="searchView" destination="dEl-UU-vgH" id="AuB-2b-KOv"/>
                         <outlet property="tblSearchResults" destination="WVp-HG-1j2" id="2Ff-z3-Y66"/>
@@ -167,4 +189,7 @@
             <point key="canvasLocation" x="4351" y="822"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spedo_purp" width="768" height="714"/>
+    </resources>
 </document>

@@ -28,6 +28,10 @@ class CarComponentViewController:
     @IBOutlet weak var carDetailImage: UIImageView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var carDetailFooter: UIView!
+    @IBOutlet weak var carDetailMakeLabel: UILabel!
+    @IBOutlet weak var carDetailModelLabel: UILabel!
+    @IBOutlet weak var carDetailYearLabel: UILabel!
+    @IBOutlet weak var carDetailMileage: UILabel!
     
     let carData: JSON = CarModel.getAllCars()!
     var carDataArray: [JSON]? = []
@@ -133,7 +137,21 @@ class CarComponentViewController:
         print("row selected: ", indexPath.row)
         if !carDetailVisible {
             carDetailVisible = true
+            let selectedCar = self.carDataArray?[indexPath.row]
+            print(selectedCar)
+            carDetailMakeLabel.text = selectedCar?["make"].stringValue
+            carDetailModelLabel.text = selectedCar?["model"].stringValue
+            carDetailYearLabel.text = selectedCar?["year"].stringValue
+            carDetailMileage.text = selectedCar?["mileage"].stringValue
+            
             AnimationHelper.animateDown(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
+        } else {
+            let selectedCar = self.carDataArray?[indexPath.row]
+            print(selectedCar)
+            carDetailMakeLabel.text = selectedCar?["make"].stringValue
+            carDetailModelLabel.text = selectedCar?["model"].stringValue
+            carDetailYearLabel.text = selectedCar?["year"].stringValue
+            carDetailMileage.text = selectedCar?["mileage"].stringValue
         }
         
         
@@ -222,8 +240,10 @@ class CarComponentViewController:
             let carDataNSString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
             let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
             
-          //  print(carDataString.score(searchString))
-            return (carDataString.score(searchString) > 0.3)
+            print(searchString)
+            print(carDataString.score(searchString))
+            
+            return (carDataString.score(searchString) > 0.1)
             //return (carDataNSString.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
@@ -265,9 +285,10 @@ class CarComponentViewController:
             
             let carDataNSString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
             let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
+            print(searchText)
+            print(carDataString.score(searchText))
             
-           // print(carDataString.score(searchText))
-            return (carDataString.score(searchText) > 0.3)
+            return (carDataString.score(searchText) > 0.1)
             //return (carDataNSString.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         

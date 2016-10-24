@@ -16,10 +16,11 @@ class AnimationHelper {
             var searchFrame = searchView.frame
             
             carViewFrame.origin.y -= carViewFrame.size.height
+            carViewFrame.origin.y -= 50
             carSubView.frame = carViewFrame
             
-            searchFrame.origin.y -= carViewFrame.size.height
-            searchView.frame = searchFrame
+//            searchFrame.origin.y -= carViewFrame.size.height
+//            searchView.frame = searchFrame
             
             carTableFrame.origin.y -= carViewFrame.size.height
             carTableFrame.size.height += carViewFrame.size.height
@@ -34,10 +35,11 @@ class AnimationHelper {
 
             
             carViewFrame.origin.y += carViewFrame.size.height
+            carViewFrame.origin.y += 50
             carSubView.frame = carViewFrame
             
-            searchFrame.origin.y += carViewFrame.size.height
-            searchView.frame = searchFrame
+//            searchFrame.origin.y += carViewFrame.size.height
+//            searchView.frame = searchFrame
             
             carTableFrame.origin.y += carViewFrame.size.height
             carTableFrame.size.height -= carViewFrame.size.height
