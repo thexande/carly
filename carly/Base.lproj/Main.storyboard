@@ -97,11 +97,20 @@
                                     <action selector="searchButtonTouchUpInside:" destination="1ux-Oq-fVX" eventType="touchUpInside" id="ICq-EO-ZEp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFj-Oj-JOH">
+                                <frame key="frameInset" minX="24" minY="35" width="327" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.56852740049999995" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="searchButton" destination="zz3-WB-6Rg" id="lLh-SX-nun"/>
                         <outlet property="speechButtonImage" destination="wfM-Bn-wDE" id="KhU-rQ-CCO"/>
+                        <outlet property="textView" destination="SFj-Oj-JOH" id="RTp-oq-KUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySr-O8-FxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
