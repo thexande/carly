@@ -14,15 +14,10 @@ class CarComponentViewController: UIViewController, UITableViewDelegate, UITable
 
     @IBOutlet weak var tblSearchResults: UITableView!
     var dataArray = [String]()
-    
     var filteredArray = [String]()
-    
-    var shouldShowSearchResults = false
-    
+    var shouldShowSearchResults = fals
     var searchController: UISearchController!
-    
     var customSearchController: CustomSearchController!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
