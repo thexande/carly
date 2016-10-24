@@ -18,23 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carly_splash" translatesAutoresizingMaskIntoConstraints="NO" id="L35-n8-jUt"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bug" translatesAutoresizingMaskIntoConstraints="NO" id="pSs-EQ-a5F">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="V5V-qV-YMK"/>
+                                    <constraint firstAttribute="width" constant="173" id="dGH-5H-dtx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CARLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZG-Mp-PHP">
+                                <frame key="frameInset" minX="116" minY="246" width="142" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19730967283248901" green="0.0078403428196907043" blue="0.39902335405349731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L35-n8-jUt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NdP-qT-zyO"/>
-                            <constraint firstItem="L35-n8-jUt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="d1p-A9-lHk"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="L35-n8-jUt" secondAttribute="bottom" id="gVz-GS-F2C"/>
-                            <constraint firstAttribute="trailing" secondItem="L35-n8-jUt" secondAttribute="trailing" id="qW4-OR-Bod"/>
+                            <constraint firstItem="pSs-EQ-a5F" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2mj-Jq-nhy"/>
+                            <constraint firstItem="pSs-EQ-a5F" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Gkd-Gf-TWM"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
-        <image name="carly_splash" width="1875" height="3335"/>
+        <image name="bug" width="940" height="400"/>
     </resources>
 </document>

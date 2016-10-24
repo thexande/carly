@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-54-Nn0">
@@ -76,20 +76,25 @@
                         <viewControllerLayoutGuide type="bottom" id="d5L-Y4-WY0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fCZ-Uo-WY0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-UU-vgH">
+                                <frame key="frameInset" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVp-HG-1j2">
-                                <frame key="frameInset" minY="190" width="414" height="482"/>
+                                <frame key="frameInset" minY="260" width="375" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nR-99-wRF">
-                                <frame key="frameInset" width="414" height="182"/>
+                                <frame key="frameInset" minY="69" width="375" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2No-c2-w1q">
-                                        <frame key="frameInset" width="414" height="195"/>
+                                        <frame key="frameInset" width="375" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -102,6 +107,7 @@
                         <outlet property="carDetailImage" destination="2No-c2-w1q" id="fye-A5-bFs"/>
                         <outlet property="carDetailView" destination="2nR-99-wRF" id="V4P-OK-2qh"/>
                         <outlet property="searchDisplayController" destination="nCM-bj-Gwb" id="6S4-dl-KUQ"/>
+                        <outlet property="searchView" destination="dEl-UU-vgH" id="AuB-2b-KOv"/>
                         <outlet property="tblSearchResults" destination="WVp-HG-1j2" id="2Ff-z3-Y66"/>
                     </connections>
                 </viewController>
@@ -115,14 +121,14 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4349.275362318841" y="141.84782608695653"/>
+            <point key="canvasLocation" x="4348" y="141.67916041979012"/>
         </scene>
         <!--Root Table View Controller-->
         <scene sceneID="Bci-4p-T2e">
             <objects>
                 <tableViewController id="XGb-wT-QAZ" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BP9-s4-moQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
