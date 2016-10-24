@@ -11,8 +11,8 @@ import UIKit
 class RootNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-            let rootViewController = self.navigationController?.viewControllers[0] as! RootViewController
-            print(rootViewController.)
+            //let carComponentViewController = self.navigationController?.viewControllers[0] as! CarComponentViewController
+            //print(carComponentViewController)
  
         // Do any additional setup after loading the view.
     }

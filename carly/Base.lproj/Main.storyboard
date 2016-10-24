@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mr8-67-gOG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3bc-rL-yp6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -17,27 +17,10 @@
                     <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-54-Nn0">
-                                <connections>
-                                    <segue destination="FPp-Jw-5gs" kind="embed" id="k6w-oc-2pj"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="D5I-54-Nn0" firstAttribute="leading" secondItem="8X6-1N-Z6H" secondAttribute="leading" id="0Bi-QY-5Ng"/>
-                            <constraint firstItem="D5I-54-Nn0" firstAttribute="top" secondItem="qOZ-F9-MCr" secondAttribute="bottom" id="Z8Z-6P-UQf"/>
-                            <constraint firstItem="YmN-ur-UJp" firstAttribute="top" secondItem="D5I-54-Nn0" secondAttribute="bottom" id="nAb-Kf-FVt"/>
-                            <constraint firstAttribute="trailing" secondItem="D5I-54-Nn0" secondAttribute="trailing" id="w2F-p1-M1o"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP">
-                        <barButtonItem key="rightBarButtonItem" title="speech" id="JuA-Om-DQT">
-                            <connections>
-                                <segue destination="1ux-Oq-fVX" kind="presentation" id="0bx-Re-Nk6"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="speech" id="JuA-Om-DQT"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="YF4-ut-aYT" id="GB0-ra-VIj"/>
@@ -111,14 +94,14 @@
                         <outlet property="searchButton" destination="zz3-WB-6Rg" id="lLh-SX-nun"/>
                         <outlet property="speechButtonImage" destination="wfM-Bn-wDE" id="KhU-rQ-CCO"/>
                         <outlet property="textView" destination="SFj-Oj-JOH" id="RTp-oq-KUa"/>
-                        <segue destination="Mr8-67-gOG" kind="presentation" identifier="showResults" id="rMH-gt-kLQ"/>
+                        <segue destination="3bc-rL-yp6" kind="presentation" identifier="showResults" id="NbH-xW-jvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySr-O8-FxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4350" y="-644"/>
+            <point key="canvasLocation" x="6082" y="210"/>
         </scene>
-        <!--Car Component View Controller-->
+        <!--CARLY-->
         <scene sceneID="N5v-T2-p2r">
             <objects>
                 <viewController id="FPp-Jw-5gs" customClass="CarComponentViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,21 +110,21 @@
                         <viewControllerLayoutGuide type="bottom" id="d5L-Y4-WY0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fCZ-Uo-WY0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-UU-vgH">
-                                <frame key="frameInset" width="375" height="50"/>
+                                <frame key="frameInset" minY="72" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVp-HG-1j2">
-                                <frame key="frameInset" minY="287" width="375" height="316"/>
+                                <frame key="frameInset" minY="353" width="375" height="316"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nR-99-wRF">
-                                <frame key="frameInset" minY="49" width="375" height="238"/>
+                                <frame key="frameInset" minY="112" width="375" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2No-c2-w1q">
@@ -197,6 +180,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="CARLY" id="OeJ-hA-Tsb">
+                        <barButtonItem key="rightBarButtonItem" title="Speech" id="MTS-tm-z7N">
+                            <connections>
+                                <segue destination="1ux-Oq-fVX" kind="presentation" id="K8w-VF-DzF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carDetailImage" destination="2No-c2-w1q" id="fye-A5-bFs"/>
                         <outlet property="carDetailMakeLabel" destination="FDb-mX-pRd" id="Dbd-Qo-Zx2"/>
@@ -219,25 +209,25 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4350" y="169"/>
+            <point key="canvasLocation" x="5288.8000000000002" y="958.4707646176912"/>
         </scene>
-        <!--Root Table View Controller-->
-        <scene sceneID="Bci-4p-T2e">
+        <!--Root Navigation View Controller-->
+        <scene sceneID="bgs-HX-81h">
             <objects>
-                <tableViewController id="XGb-wT-QAZ" customClass="RootTableViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BP9-s4-moQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="XGb-wT-QAZ" id="AZ3-aa-PnX"/>
-                            <outlet property="delegate" destination="XGb-wT-QAZ" id="dPu-BP-bNo"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="usi-Ok-QTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3bc-rL-yp6" customClass="RootNavigationViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="McV-wS-TzD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FPp-Jw-5gs" kind="relationship" relationship="rootViewController" id="qUK-Ve-iGl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNk-xo-7bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4351" y="822"/>
+            <point key="canvasLocation" x="4349.6000000000004" y="958.4707646176912"/>
         </scene>
     </scenes>
     <resources>

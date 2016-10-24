@@ -81,6 +81,8 @@ class SpeechSearchViewController: UIViewController, SFSpeechRecognizerDelegate  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showResults") {
             let destination = segue.destination as! RootNavigationViewController
+            let carVc = destination.topViewController as! CarComponentViewController
+            print(carVc.carData)
         }
     }
     // [START speech recognition helper methods]
