@@ -3,11 +3,13 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SlideMenuControllerSwift (3.0.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
   - SDWebImage
+  - SlideMenuControllerSwift
   - SwiftyJSON (from `https://github.com/BaiduHiDeviOS/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
@@ -23,8 +25,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
   SwiftyJSON: 6118fb49d7519c4d31a0c1f3d5af936e9047b556
 
-PODFILE CHECKSUM: 2c37a4f3d728983b92945075e2e91039ebc5fc71
+PODFILE CHECKSUM: c49b6532cb10aed3fbaffdcafa046737895a3818
 
 COCOAPODS: 1.0.1

@@ -7,6 +7,8 @@ target 'carly' do
   pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
   pod 'SDWebImage'
   pod 'DZNEmptyDataSet'
+  pod 'SlideMenuControllerSwift'
+
 
   target 'carlyTests' do
     inherit! :search_paths
