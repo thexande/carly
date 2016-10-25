@@ -82,7 +82,7 @@ class SpeechSearchViewController: UIViewController, SFSpeechRecognizerDelegate  
         if (segue.identifier == "showResults") {
             let destination = segue.destination as! RootNavigationViewController
             let carVc = destination.topViewController as! CarComponentViewController
-            carVc.recieveVoiceText(voice: self.userSpeechString!)
+            carVc.recieveVoiceText(voice: self.userSpeechString!.trimmingCharacters(in: .whitespaces))
         }
     }
     // [START speech recognition helper methods]
@@ -123,9 +123,7 @@ class SpeechSearchViewController: UIViewController, SFSpeechRecognizerDelegate  
                 
                 if(isFinal == true) {
                     // attempt to parse binary choices from user input
-                    self.performSegue(withIdentifier: "showResults", sender: self)
-                    print("user spech here ", self.userSpeechString)
-                    
+                    self.performSegue(withIdentifier: "showResults", sender: self)                    
                 }
             }
             if error != nil || isFinal {

@@ -80,14 +80,11 @@ class CarComponentViewController:
     // MARK: public recieveVoiceText
     public func recieveVoiceText(voice: String) {
         // load table view results from user speech string
-        print("in view controller!!", voice)
-        
+       
+        let trimmedVoice = voice.filter { $0 != Character(" ") }
+        print("in view controller!!", trimmedVoice)
         // set car data array
         self.carDataArray = carData.arrayValue
-        
-        
-        print("car data here !", carDataArray)
-        
         self.filteredCarArray = carDataArray?.filter({ (car) -> Bool in
             
             let carMake: NSString = car["make"].stringValue as NSString
@@ -95,9 +92,9 @@ class CarComponentViewController:
             let carYear: NSString = car["year"].stringValue as NSString
             
             let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
-            print(carDataString.score(voice))
+            print(carDataString.score(trimmedVoice))
             
-            return (carDataString.score(voice) > 0.1)
+            return (carDataString.score(trimmedVoice) > 0.1)
         })
 //        // Reload the tableview.
        shouldShowSearchResults = true

@@ -23,6 +23,8 @@
 		B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA11DBE9494003BB9E6 /* StringScore.swift */; };
 		B0B80DA41DBE9EB8003BB9E6 /* vehicles_deduped.json in Resources */ = {isa = PBXBuildFile; fileRef = B0B80DA31DBE9EB8003BB9E6 /* vehicles_deduped.json */; };
 		B0B80DA61DBEB767003BB9E6 /* SpeechSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */; };
+		B0B80DA81DBEF2EF003BB9E6 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA71DBEF2EF003BB9E6 /* Trim.swift */; };
+		B0B80DAA1DBEF488003BB9E6 /* removeWhitePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA91DBEF488003BB9E6 /* removeWhitePlace.swift */; };
 		B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */; };
 		B0DCECDB1DBAB9EA00202ABB /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */; };
 		B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */; };
@@ -31,7 +33,6 @@
 		B0DCECE51DBBE5AA00202ABB /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECE41DBBE5AA00202ABB /* SwiftSpinner.swift */; };
 		B0DCECE91DBBE82000202ABB /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECE81DBBE82000202ABB /* RootNavigationViewController.swift */; };
 		B0DCECEB1DBC0C4300202ABB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECEA1DBC0C4200202ABB /* ImageDownloader.swift */; };
-		B0DCECEE1DBC0F8C00202ABB /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECED1DBC0F8C00202ABB /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		B0B80DA11DBE9494003BB9E6 /* StringScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringScore.swift; path = Helpers/StringScore.swift; sourceTree = "<group>"; };
 		B0B80DA31DBE9EB8003BB9E6 /* vehicles_deduped.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicles_deduped.json; sourceTree = "<group>"; };
 		B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechSearchViewController.swift; path = ViewControllers/SpeechSearchViewController.swift; sourceTree = "<group>"; };
+		B0B80DA71DBEF2EF003BB9E6 /* Trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trim.swift; sourceTree = "<group>"; };
+		B0B80DA91DBEF488003BB9E6 /* removeWhitePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = removeWhitePlace.swift; path = Extensions/removeWhitePlace.swift; sourceTree = "<group>"; };
 		B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Views/CarTableViewCell.swift; sourceTree = "<group>"; };
 		B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarTableViewCell.xib; path = Views/CarTableViewCell.xib; sourceTree = "<group>"; };
 		B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationHelper.swift; path = Helpers/AnimationHelper.swift; sourceTree = "<group>"; };
@@ -85,7 +88,6 @@
 		B0DCECE41DBBE5AA00202ABB /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = Helpers/SwiftSpinner.swift; sourceTree = "<group>"; };
 		B0DCECE81DBBE82000202ABB /* RootNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootNavigationViewController.swift; path = ViewControllers/RootNavigationViewController.swift; sourceTree = "<group>"; };
 		B0DCECEA1DBC0C4200202ABB /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		B0DCECED1DBC0F8C00202ABB /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageView.swift; path = Extensions/UIImageView.swift; sourceTree = "<group>"; };
 		D0BA33077C536FAD2CB1DE6B /* Pods-carlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-carlyUITests/Pods-carlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D85A2A886ADBF88F31B35D8B /* Pods_carly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EDDFE7EEE79EC38A277BE3 /* Pods-carlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carlyTests/Pods-carlyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,7 +250,8 @@
 		B0DCECEC1DBC0F7000202ABB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B0DCECED1DBC0F8C00202ABB /* UIImageView.swift */,
+				B0B80DA71DBEF2EF003BB9E6 /* Trim.swift */,
+				B0B80DA91DBEF488003BB9E6 /* removeWhitePlace.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -537,16 +540,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B80DA81DBEF2EF003BB9E6 /* Trim.swift in Sources */,
 				B0B80DA61DBEB767003BB9E6 /* SpeechSearchViewController.swift in Sources */,
 				B0AD27721DBA96AB00BC222A /* AppDelegate.swift in Sources */,
 				B0DCECE51DBBE5AA00202ABB /* SwiftSpinner.swift in Sources */,
 				B06766311DBC7C510083723F /* CustomSearchBar.swift in Sources */,
+				B0B80DAA1DBEF488003BB9E6 /* removeWhitePlace.swift in Sources */,
 				B067662F1DBC7C3E0083723F /* CustomSearchController.swift in Sources */,
 				B0DCECE11DBBDCC900202ABB /* CarModel.swift in Sources */,
 				B0DCECE91DBBE82000202ABB /* RootNavigationViewController.swift in Sources */,
 				B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */,
 				B06766271DBC59D40083723F /* CarComponentViewController.swift in Sources */,
-				B0DCECEE1DBC0F8C00202ABB /* UIImageView.swift in Sources */,
 				B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */,
 				B0DCECEB1DBC0C4300202ABB /* ImageDownloader.swift in Sources */,
 				B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */,
