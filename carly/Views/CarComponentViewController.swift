@@ -22,6 +22,11 @@ class CarComponentViewController:
     CustomSearchControllerDelegate,
     DZNEmptyDataSetSource,
     DZNEmptyDataSetDelegate {
+    @IBAction func menuButtonClicked(_ sender: AnyObject) {
+        // animate car detail view
+        print("animate")
+        AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
+    }
 
     @IBOutlet weak var tblSearchResults: UITableView!
     @IBOutlet weak var carDetailView: UIView!
@@ -70,7 +75,7 @@ class CarComponentViewController:
         
         // animate car detail view
         print("animate")
-        //AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
+        AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
     }
     
     override func didReceiveMemoryWarning() {
