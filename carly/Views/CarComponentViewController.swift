@@ -60,13 +60,12 @@ class CarComponentViewController:
         tblSearchResults.emptyDataSetSource = self
         tblSearchResults.emptyDataSetDelegate = self
         tblSearchResults.tableFooterView = UIView()
-        
-        print(self.carData.count)
+        tblSearchResults.reloadData()
         
         // Uncomment the following line to enable the default search controller.
         //configureSearchController()
         
-        // Comment out the next line to disable the customized search controller and search bar and use the default ones. Also, uncomment the above line.
+        // Our custom search bar configuration
         configureCustomSearchController()
         
         // animate car detail view
@@ -77,6 +76,33 @@ class CarComponentViewController:
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    // MARK: public recieveVoiceText
+    public func recieveVoiceText(voice: String) {
+        // load table view results from user speech string
+        print("in view controller!!", voice)
+        
+        // set car data array
+        self.carDataArray = carData.arrayValue
+        
+        
+        print("car data here !", carDataArray)
+        
+        self.filteredCarArray = carDataArray?.filter({ (car) -> Bool in
+            
+            let carMake: NSString = car["make"].stringValue as NSString
+            let carModel: NSString = car["model"].stringValue as NSString
+            let carYear: NSString = car["year"].stringValue as NSString
+            
+            let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
+            print(carDataString.score(voice))
+            
+            return (carDataString.score(voice) > 0.1)
+        })
+//        // Reload the tableview.
+       shouldShowSearchResults = true
+        
+        //tblSearchResults.reloadData()
     }
     
     // MARK: DZNDataSource

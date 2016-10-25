@@ -82,7 +82,7 @@ class SpeechSearchViewController: UIViewController, SFSpeechRecognizerDelegate  
         if (segue.identifier == "showResults") {
             let destination = segue.destination as! RootNavigationViewController
             let carVc = destination.topViewController as! CarComponentViewController
-            print(carVc.carData)
+            carVc.recieveVoiceText(voice: self.userSpeechString!)
         }
     }
     // [START speech recognition helper methods]

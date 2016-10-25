@@ -23,8 +23,6 @@
 		B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA11DBE9494003BB9E6 /* StringScore.swift */; };
 		B0B80DA41DBE9EB8003BB9E6 /* vehicles_deduped.json in Resources */ = {isa = PBXBuildFile; fileRef = B0B80DA31DBE9EB8003BB9E6 /* vehicles_deduped.json */; };
 		B0B80DA61DBEB767003BB9E6 /* SpeechSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */; };
-		B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */; };
-		B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */; };
 		B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */; };
 		B0DCECDB1DBAB9EA00202ABB /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */; };
 		B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */; };
@@ -79,8 +77,6 @@
 		B0B80DA11DBE9494003BB9E6 /* StringScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringScore.swift; path = Helpers/StringScore.swift; sourceTree = "<group>"; };
 		B0B80DA31DBE9EB8003BB9E6 /* vehicles_deduped.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vehicles_deduped.json; sourceTree = "<group>"; };
 		B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechSearchViewController.swift; path = ViewControllers/SpeechSearchViewController.swift; sourceTree = "<group>"; };
-		B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
-		B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		B0DCECD81DBAB9EA00202ABB /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Views/CarTableViewCell.swift; sourceTree = "<group>"; };
 		B0DCECD91DBAB9EA00202ABB /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarTableViewCell.xib; path = Views/CarTableViewCell.xib; sourceTree = "<group>"; };
 		B0DCECDD1DBBD5AC00202ABB /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationHelper.swift; path = Helpers/AnimationHelper.swift; sourceTree = "<group>"; };
@@ -214,8 +210,6 @@
 			children = (
 				B067662D1DBC7BD30083723F /* SearchControllers */,
 				B06766261DBC59D40083723F /* CarComponentViewController.swift */,
-				B0DCECCB1DBAAB8400202ABB /* RootViewController.swift */,
-				B0DCECD41DBAB35700202ABB /* RootTableViewController.swift */,
 				B0DCECE81DBBE82000202ABB /* RootNavigationViewController.swift */,
 				B0B80DA51DBEB767003BB9E6 /* SpeechSearchViewController.swift */,
 			);
@@ -550,13 +544,11 @@
 				B067662F1DBC7C3E0083723F /* CustomSearchController.swift in Sources */,
 				B0DCECE11DBBDCC900202ABB /* CarModel.swift in Sources */,
 				B0DCECE91DBBE82000202ABB /* RootNavigationViewController.swift in Sources */,
-				B0DCECD51DBAB35700202ABB /* RootTableViewController.swift in Sources */,
 				B0DCECDE1DBBD5AC00202ABB /* AnimationHelper.swift in Sources */,
 				B06766271DBC59D40083723F /* CarComponentViewController.swift in Sources */,
 				B0DCECEE1DBC0F8C00202ABB /* UIImageView.swift in Sources */,
 				B0B80DA21DBE9494003BB9E6 /* StringScore.swift in Sources */,
 				B0DCECEB1DBC0C4300202ABB /* ImageDownloader.swift in Sources */,
-				B0DCECCC1DBAAB8400202ABB /* RootViewController.swift in Sources */,
 				B0AD27A51DBA9D9500BC222A /* CarlyHeaderView.swift in Sources */,
 				B0DCECDA1DBAB9EA00202ABB /* CarTableViewCell.swift in Sources */,
 			);
