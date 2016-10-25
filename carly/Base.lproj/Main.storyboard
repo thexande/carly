@@ -69,6 +69,15 @@
         <!--CARLY-->
         <scene sceneID="N5v-T2-p2r">
             <objects>
+                <searchDisplayController id="nCM-bj-Gwb">
+                    <connections>
+                        <outlet property="delegate" destination="FPp-Jw-5gs" id="3mD-zm-Oss"/>
+                        <outlet property="searchContentsController" destination="FPp-Jw-5gs" id="Dgk-4c-f0Z"/>
+                        <outlet property="searchResultsDataSource" destination="FPp-Jw-5gs" id="lga-ki-w48"/>
+                        <outlet property="searchResultsDelegate" destination="FPp-Jw-5gs" id="Oai-Ok-c8y"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uck-tQ-eNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FPp-Jw-5gs" customClass="CarComponentViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9R7-q4-sAO"/>
@@ -81,7 +90,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-UU-vgH">
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="nKe-Xv-WLc"/>
+                                    <constraint firstAttribute="width" constant="375" id="OiL-QU-fsx"/>
+                                    <constraint firstAttribute="height" constant="50" id="h62-7B-wkb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nR-99-wRF">
@@ -155,16 +165,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dEl-UU-vgH" firstAttribute="top" secondItem="9R7-q4-sAO" secondAttribute="bottom" id="2M4-RQ-tOX"/>
                             <constraint firstItem="WVp-HG-1j2" firstAttribute="leading" secondItem="fCZ-Uo-WY0" secondAttribute="leading" id="3QM-Yn-V4p"/>
-                            <constraint firstItem="dEl-UU-vgH" firstAttribute="leading" secondItem="fCZ-Uo-WY0" secondAttribute="leading" id="9Iz-f4-jQp"/>
+                            <constraint firstItem="dEl-UU-vgH" firstAttribute="leading" secondItem="fCZ-Uo-WY0" secondAttribute="leading" id="9td-d7-LoN"/>
                             <constraint firstItem="WVp-HG-1j2" firstAttribute="height" secondItem="fCZ-Uo-WY0" secondAttribute="height" multiplier="0.473" id="GY2-Xw-dE3"/>
+                            <constraint firstAttribute="trailing" secondItem="dEl-UU-vgH" secondAttribute="trailing" id="RD7-eq-haR"/>
                             <constraint firstItem="d5L-Y4-WY0" firstAttribute="top" secondItem="WVp-HG-1j2" secondAttribute="bottom" id="Tem-2t-AVv"/>
                             <constraint firstAttribute="trailing" secondItem="WVp-HG-1j2" secondAttribute="trailing" id="V4d-du-qnw"/>
                             <constraint firstItem="2nR-99-wRF" firstAttribute="height" secondItem="fCZ-Uo-WY0" secondAttribute="height" multiplier="0.355" id="VAq-UB-vaa"/>
-                            <constraint firstAttribute="trailing" secondItem="dEl-UU-vgH" secondAttribute="trailing" id="dSx-h7-3n3"/>
                             <constraint firstItem="2nR-99-wRF" firstAttribute="leading" secondItem="fCZ-Uo-WY0" secondAttribute="leading" id="fna-ed-eYe"/>
                             <constraint firstItem="2nR-99-wRF" firstAttribute="top" secondItem="9R7-q4-sAO" secondAttribute="bottom" constant="50" id="idU-2T-ylw"/>
+                            <constraint firstItem="dEl-UU-vgH" firstAttribute="top" secondItem="9R7-q4-sAO" secondAttribute="bottom" id="pyR-GQ-ChF"/>
                             <constraint firstAttribute="trailing" secondItem="2nR-99-wRF" secondAttribute="trailing" id="xOf-jj-mXd"/>
                         </constraints>
                     </view>
@@ -191,15 +201,6 @@
                         <outlet property="tblSearchResults" destination="WVp-HG-1j2" id="2Ff-z3-Y66"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uck-tQ-eNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="nCM-bj-Gwb">
-                    <connections>
-                        <outlet property="delegate" destination="FPp-Jw-5gs" id="3mD-zm-Oss"/>
-                        <outlet property="searchContentsController" destination="FPp-Jw-5gs" id="Dgk-4c-f0Z"/>
-                        <outlet property="searchResultsDataSource" destination="FPp-Jw-5gs" id="lga-ki-w48"/>
-                        <outlet property="searchResultsDelegate" destination="FPp-Jw-5gs" id="Oai-Ok-c8y"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="5312.8000000000002" y="957.57121439280365"/>
         </scene>

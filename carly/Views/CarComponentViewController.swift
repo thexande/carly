@@ -51,7 +51,7 @@ class CarComponentViewController:
         tblSearchResults.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: "CarCell")
         // set car data array
         self.carDataArray = carData.arrayValue
-
+        print("car detail view width", carDetailView.frame.width)
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
         tblSearchResults.separatorColor = UIColor.white
@@ -70,7 +70,7 @@ class CarComponentViewController:
         
         // animate car detail view
         print("animate")
-        AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
+        //AnimationHelper.animateUp(carSubView: self.carDetailView, carTable: self.tblSearchResults, searchView: self.searchView)
     }
     
     override func didReceiveMemoryWarning() {
@@ -223,7 +223,9 @@ class CarComponentViewController:
     }
     
     func configureCustomSearchController() {
-        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: tblSearchResults.frame.width, height: 50.0), searchBarFont: UIFont(name: "Arial Rounded MT Bold", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor(red:0.56, green:0.07, blue:1.00, alpha:1.0))
+        let screenSize: CGRect = UIScreen.main.bounds
+
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRect(x: 0.0, y: 0.0, width: screenSize.width, height: 50.0), searchBarFont: UIFont(name: "Arial Rounded MT Bold", size: 16.0)!, searchBarTextColor: UIColor.white, searchBarTintColor: UIColor(red:0.56, green:0.07, blue:1.00, alpha:1.0))
         customSearchController.customSearchBar.placeholder = "Search For Your Next Car!"
         searchView.addSubview(customSearchController.customSearchBar)
         customSearchController.customDelegate = self
@@ -317,8 +319,6 @@ class CarComponentViewController:
             let carModel: NSString = car["model"].stringValue as NSString
             let carYear: NSString = car["year"].stringValue as NSString
             
-            
-            let carDataNSString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
             let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
             print(searchText)
             print(carDataString.score(searchText))
