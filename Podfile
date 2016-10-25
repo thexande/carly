@@ -7,7 +7,7 @@ target 'carly' do
   pod 'SwiftyJSON', git: 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', branch: 'swift3'
   pod 'SDWebImage'
   pod 'DZNEmptyDataSet'
-  pod 'SlideMenuControllerSwift'
+  #pod 'SlideMenuControllerSwift', git: 'https://github.com/dekatotoro/SlideMenuControllerSwift', branch: 'master'
 
 
   target 'carlyTests' do

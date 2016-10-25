@@ -12,7 +12,6 @@ import SDWebImage
 import DZNEmptyDataSet
 import Foundation
 
-
 class CarComponentViewController:
     UIViewController,
     UITableViewDelegate,
@@ -163,6 +162,7 @@ class CarComponentViewController:
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
         print("row selected: ", indexPath.row)
+        
         if !carDetailVisible {
             carDetailVisible = true
             let selectedCar = self.carDataArray?[indexPath.row]
@@ -273,15 +273,9 @@ class CarComponentViewController:
             let carMake: NSString = car["make"].stringValue as NSString
             let carModel: NSString = car["model"].stringValue as NSString
             let carYear: NSString = car["year"].stringValue as NSString
-            
-            
-            let carDataNSString: NSString = "\(carMake),\(carModel),\(carYear)" as NSString
             let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
             
-            print(searchString)
-            print(carDataString.score(searchString))
-            
-            return (carDataString.score(searchString) > 0.1)
+            return (carDataString.score(searchString.trimmingCharacters(in: .whitespaces)) > 0.1)
             //return (carDataNSString.range(of: searchString, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
         })
         
@@ -323,13 +317,8 @@ class CarComponentViewController:
             let carMake: NSString = car["make"].stringValue as NSString
             let carModel: NSString = car["model"].stringValue as NSString
             let carYear: NSString = car["year"].stringValue as NSString
-            
             let carDataString: String = "\(carMake),\(carModel),\(carYear)" as String
-            print(searchText)
-            print(carDataString.score(searchText))
-            
-            return (carDataString.score(searchText) > 0.1)
-            //return (carDataNSString.range(of: searchText, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
+            return (carDataString.score(searchText.trimmingCharacters(in: .whitespaces)) > 0.1)
         })
         
         // Reload the tableview.

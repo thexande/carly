@@ -72,15 +72,6 @@
         <!--CARLY-->
         <scene sceneID="N5v-T2-p2r">
             <objects>
-                <searchDisplayController id="nCM-bj-Gwb">
-                    <connections>
-                        <outlet property="delegate" destination="FPp-Jw-5gs" id="3mD-zm-Oss"/>
-                        <outlet property="searchContentsController" destination="FPp-Jw-5gs" id="Dgk-4c-f0Z"/>
-                        <outlet property="searchResultsDataSource" destination="FPp-Jw-5gs" id="lga-ki-w48"/>
-                        <outlet property="searchResultsDelegate" destination="FPp-Jw-5gs" id="Oai-Ok-c8y"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uck-tQ-eNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FPp-Jw-5gs" customClass="CarComponentViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9R7-q4-sAO"/>
@@ -158,12 +149,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="CARLY" id="OeJ-hA-Tsb">
-                        <barButtonItem key="leftBarButtonItem" image="ic_menu_black_24dp" id="VMC-cR-8af">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="menuButtonClicked:" destination="FPp-Jw-5gs" id="ndG-JS-eBp"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Cnc-VC-Bdg">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -183,6 +168,15 @@
                         <outlet property="tblSearchResults" destination="WVp-HG-1j2" id="2Ff-z3-Y66"/>
                     </connections>
                 </viewController>
+                <searchDisplayController id="nCM-bj-Gwb">
+                    <connections>
+                        <outlet property="delegate" destination="FPp-Jw-5gs" id="3mD-zm-Oss"/>
+                        <outlet property="searchContentsController" destination="FPp-Jw-5gs" id="Dgk-4c-f0Z"/>
+                        <outlet property="searchResultsDataSource" destination="FPp-Jw-5gs" id="lga-ki-w48"/>
+                        <outlet property="searchResultsDelegate" destination="FPp-Jw-5gs" id="Oai-Ok-c8y"/>
+                    </connections>
+                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uck-tQ-eNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5312.8000000000002" y="957.57121439280365"/>
         </scene>
@@ -206,7 +200,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_menu_black_24dp" width="24" height="24"/>
         <image name="spedo_purp" width="768" height="714"/>
         <image name="voice_button_state_1" width="725" height="690"/>
     </resources>
