@@ -6,56 +6,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CARLY-->
-        <scene sceneID="D4y-OP-zMS">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8mg-vg-uHT" customClass="RootViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qOZ-F9-MCr"/>
-                        <viewControllerLayoutGuide type="bottom" id="YmN-ur-UJp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8X6-1N-Z6H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="CARLY" id="dCH-j5-jXP">
-                        <barButtonItem key="rightBarButtonItem" title="speech" id="JuA-Om-DQT"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="YF4-ut-aYT" id="GB0-ra-VIj"/>
-                    </connections>
-                </viewController>
-                <searchDisplayController id="YF4-ut-aYT">
-                    <connections>
-                        <outlet property="delegate" destination="8mg-vg-uHT" id="Q8l-wi-lw5"/>
-                        <outlet property="searchContentsController" destination="8mg-vg-uHT" id="40w-1p-nrw"/>
-                        <outlet property="searchResultsDataSource" destination="8mg-vg-uHT" id="ofE-S5-Tj5"/>
-                        <outlet property="searchResultsDelegate" destination="8mg-vg-uHT" id="z0u-X5-5xk"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VLj-v2-0lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3415.9420289855075" y="141.03260869565219"/>
-        </scene>
-        <!--Root Navigation View Controller-->
-        <scene sceneID="hhl-dO-yIR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mr8-67-gOG" customClass="RootNavigationViewController" customModule="carly" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz0-KZ-I1K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8mg-vg-uHT" kind="relationship" relationship="rootViewController" id="f7w-mQ-oO3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m9X-5d-vjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2515.9420289855075" y="144.29347826086956"/>
-        </scene>
         <!--Speech Search View Controller-->
         <scene sceneID="qjK-K8-mo9">
             <objects>
@@ -181,9 +131,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="CARLY" id="OeJ-hA-Tsb">
-                        <barButtonItem key="rightBarButtonItem" title="Speech" id="MTS-tm-z7N">
+                        <barButtonItem key="leftBarButtonItem" image="ic_menu_black_24dp" id="VMC-cR-8af">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Cnc-VC-Bdg">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="1ux-Oq-fVX" kind="presentation" id="K8w-VF-DzF"/>
+                                <segue destination="1ux-Oq-fVX" kind="presentation" id="m7t-ff-yWz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -209,7 +163,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="5288.8000000000002" y="958.4707646176912"/>
+            <point key="canvasLocation" x="5314" y="958"/>
         </scene>
         <!--Root Navigation View Controller-->
         <scene sceneID="bgs-HX-81h">
@@ -231,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_menu_black_24dp" width="24" height="24"/>
         <image name="spedo_purp" width="768" height="714"/>
         <image name="voice_button_state_1" width="725" height="690"/>
     </resources>
